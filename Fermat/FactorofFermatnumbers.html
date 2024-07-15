@@ -1,0 +1,1872 @@
+<html><head></head><body>
+    <title>Factor of Fermat numbers</title>
+
+
+<h2 align="center">
+    Prime factors &nbsp;<i>k</i> · 2<sup><i>n</i></sup> + 1&nbsp;
+    of Fermat numbers &nbsp;<i>F<sub>m</sub></i><br>
+    and complete factoring status
+</h2>
+<p align="center"> <b><i>Compiled by Wilfrid Keller</i></b>
+</p><ul><strong>
+   <li><a href="#Prime">Prime Fermat numbers</a>
+   </li><li><a href="#Complete">Completely factored Fermat numbers</a>
+   </li><li><a href="#Incomplete">Factorizations known to be incomplete</a>
+   </li><li><a href="#Cofactors">Composite cofactors</a>
+   </li><li><a href="#Composite">Composite Fermat numbers without known factor</a>
+   </li><li><a href="#Larger">Prime factors of larger Fermat numbers</a>
+   </li><li><a href="#Names">Full names of researchers</a>
+   </li><li><a href="#Summary">Summary of factoring status</a>
+   </li><li><a href="#Count">Count of factors according to
+        difference &nbsp;<i>n</i> − <i>m</i></a>
+   </li><li><a href="#References">Selected references</a> 
+   </li></strong><li><strong><a href="#Search">Known search limits</a>
+</strong>
+</li></ul>
+<p align="center">
+   <b><font color="green">
+       <sub>&nbsp;</sub><i>News Flash!</i><sub>&nbsp;</sub></font><sub>&nbsp;</sub></b>
+
+<b><br>On July 4th, 2024, Ryan Propper and Serge Batalov discovered that<sub>&nbsp;</sub> 
+   <br>56073 · 2<sup>223382</sup> + 1 divides <i>F</i><sub>223380</sub>.<sub>&nbsp;</sub>
+</b><br>
+
+&nbsp; − − −<b><br>On July 3rd, 2024, Erwin Doescher and George Woltman discovered that<sub>&nbsp;</sub> 
+   <br>30792107213272383425 · 2<sup>43</sup> + 1 divides <i>F</i><sub>41</sub>.<sub>&nbsp;</sub>
+</b><br>
+
+&nbsp; − − −<sub>&nbsp;</sub><sub>&nbsp;</sub> 
+
+ 
+
+<b><br>After a ten month dry spell, Gary Gostin finally found 
+   <br>a new Fermat factor: On May 24, 2024, he discovered that<sub>&nbsp;</sub> 
+   <br>322072887044529 · 2<sup>253</sup> + 1 divides <i>F</i><sub>251</sub>.
+   <br>As he aptly remarked himself, this factor makes <i>F</i><sub>251</sub> 
+   <br>the 6th largest Fermat number with multiple known factors.
+</b><br>
+
+</p><p align="center"> 
+<b> <font color="blue"><sub>&nbsp;</sub>The other previously discovered factors<sub>&nbsp;</sub></font> </b>
+<table>
+<tbody><tr><td align="center"><b><sub>&nbsp;</sub> Date <sub>&nbsp;</sub></b> </td><td>
+    </td><td align="center"><b><sub>&nbsp;</sub> Divisibility <sub>&nbsp;</sub></b> </td><td>
+    </td><td> <b>Discoverer <sub>&nbsp;</sub></b> 
+</td></tr>
+<tr>
+<td align="center"> <b>Jul 28, 2023</b> </td><td> &nbsp; &nbsp;
+    </td><td align="center"> 
+    <b>13243 · 2<sup>699764</sup> + 1 divides <i>F</i><sub>699760</sub></b><sub>&nbsp;</sub>
+    </td><td> &nbsp; &nbsp;
+    </td><td> <b>Propper &amp; Batalov</b> 
+</td></tr>
+<tr>
+<td align="center"> <b>Jul 27, 2023</b> </td><td> &nbsp; &nbsp;
+    </td><td align="center"> 
+    <b>43390164659167 · 2<sup>164</sup> + 1 divides <i>F</i><sub>160</sub><sub></sub></b>&nbsp;
+    </td><td> &nbsp; &nbsp;
+    </td><td> <b>Erwin Doescher</b> 
+</td></tr>
+<tr>
+<td align="center"> <b>Jul 17, 2023</b> </td><td> &nbsp; &nbsp;
+    </td><td align="center"> 
+    <b>141 · 2<sup>4192911</sup> + 1 divides <i>F</i><sub>4192909</sub><sub>&nbsp;</sub>
+    </b></td><td> &nbsp; &nbsp;
+    </td><td> <b>Scott Brown</b> 
+</td></tr>
+<tr>
+<td align="center"> <b>Jul 10, 2023</b> </td><td> &nbsp; &nbsp;
+    </td><td align="center"> 
+    <b>10981209 · 2<sup>31883</sup> + 1 divides <i>F</i><sub>31880</sub><sub>&nbsp;</sub>
+    </b></td><td> &nbsp; &nbsp;
+    </td><td> <b>Serge Batalov</b> 
+</td></tr>
+<tr>
+<td align="center"> <b>Jun 25, 2023</b> </td><td> &nbsp; &nbsp;
+    </td><td align="center"> 
+    <b>44893411020831 · 2<sup>427</sup> + 1 divides <i>F</i><sub>425</sub><sub>&nbsp;</sub>
+    </b></td><td> &nbsp; &nbsp;
+    </td><td> <b>Gary Gostin</b> 
+</td></tr>
+</tbody></table>
+</p><p align="center"> <b> * &nbsp; * &nbsp; * </b>
+</p><h3 align="center">
+    <a name="Prime"> Prime Fermat numbers </a>
+</h3>
+<p align="center">
+    <i>F</i><sub>0</sub> = 3, &nbsp; 
+    <i>F</i><sub>1</sub> = 5, &nbsp; 
+    <i>F</i><sub>2</sub> = 17, &nbsp; 
+    <i>F</i><sub>3</sub> = 257, &nbsp; 
+    <i>F</i><sub>4</sub> = 65537 
+</p><p>
+</p><h3 align="center">
+    <a name="Complete"> Completely factored Fermat numbers </a>
+</h3>
+<p align="center">
+<table>
+<tbody><tr><td align="right"> <b><i>m</i></b> </td><td> &nbsp; &nbsp;
+    </td><td align="right"> <b><i>k</i></b> </td><td> &nbsp; &nbsp;
+    </td><td align="right"> <b><i>n</i></b> </td><td> &nbsp; &nbsp; </td><td> </td><td>
+    </td><td> <b> Year </b> </td><td> &nbsp; &nbsp; 
+    </td><td> <b> Discoverer </b> 
+</td></tr><tr><td align="right"> 5 </td><td> 
+    </td><td align="right"> 5 </td><td> </td><td align="right"> 7 </td><td> 
+    </td><td> </td><td> </td><td> 1732 </td><td> </td><td> L. Euler 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 52347 </td><td> </td><td align="right"> 7 </td><td> 
+    </td><td> </td><td> </td><td> 1732 </td><td> </td><td> L. Euler 
+</td></tr><tr><td align="right"> 6 </td><td> 
+    </td><td align="right"> 1071 </td><td> </td><td align="right"> 8 </td><td> 
+    </td><td> </td><td> </td><td> 1855 </td><td> </td><td> T. Clausen; F. Landry 1880 
+</td></tr><tr><td>  </td><td>
+    </td><td align="right"> 262814145745 </td><td> </td><td align="right"> 8 </td><td> 
+    </td><td> </td><td> </td><td> 1855 </td><td> 
+    </td><td> T. Clausen; F. Landry &amp; H. Le Lasseur 1880 
+</td></tr><tr><td align="right"> 7 </td><td>
+    </td><td align="right"> 116503103764643 </td><td> </td><td align="right"> 9 </td><td> 
+    </td><td> 13 </td><td align="center"> Sep </td><td> 1970 </td><td> </td><td> M. A. Morrison &amp; J. Brillhart 
+</td></tr><tr><td> </td><td>
+    </td><td align="right"> 11141971095088142685 </td><td> </td><td align="right"> 9 </td><td> 
+    </td><td> 13 </td><td align="center"> Sep </td><td> 1970 </td><td> </td><td> M. A. Morrison &amp; J. Brillhart 
+</td></tr><tr><td align="right"> 8 </td><td>
+    </td><td align="right"> 604944512477 </td><td> </td><td align="right"> 11 </td><td> 
+    </td><td>  </td><td align="center">  </td><td> 1980 </td><td> </td><td> R. P. Brent &amp; J. M. Pollard 
+</td></tr><tr><td> </td><td> </td><td align="right"> [59 digits] </td><td> </td><td align="right"> 11 </td><td> 
+    </td><td>  </td><td align="center">  </td><td> 1980 </td><td> </td><td> R. P. Brent &amp; J. M. Pollard 
+</td></tr><tr><td align="right"> 9 </td><td>
+    </td><td align="right"> 37 </td><td> </td><td align="right"> 16 </td><td> 
+    </td><td> </td><td> </td><td> 1903 </td><td> </td><td> A. E. Western 
+</td></tr><tr><td> </td><td>
+    </td><td align="right"> [46 digits] </td><td> </td><td align="right"> 11 </td><td> 
+    </td><td> 15 </td><td align="center"> Jun </td><td> 1990 </td><td>
+    </td><td> A. K. Lenstra, M. S. Manasse &amp; a larger team 
+</td></tr><tr><td> </td><td>
+    </td><td align="right"> [96 digits] </td><td> </td><td align="right"> 11 </td><td> 
+    </td><td> 15 </td><td align="center"> Jun </td><td> 1990 </td><td>
+    </td><td> A. K. Lenstra, M. S. Manasse &amp; a larger team 
+</td></tr><tr><td align="right"> 10 </td><td>
+    </td><td align="right"> 11131 </td><td> </td><td align="right"> 12 </td><td> 
+    </td><td> 15 </td><td align="center"> Aug </td><td> 1953 </td><td> </td><td> J. L. Selfridge 
+</td></tr><tr><td>  </td><td>
+    </td><td align="right"> 395937 </td><td> </td><td align="right"> 14 </td><td> 
+    </td><td> </td><td> </td><td> 1962 </td><td> </td><td> J. Brillhart 
+</td></tr><tr><td> </td><td>
+    </td><td align="right"> [37 digits] </td><td> </td><td align="right"> 12 </td><td> 
+    </td><td> 20 </td><td align="center"> Oct </td><td> 1995 </td><td> </td><td> R. P. Brent 
+</td></tr><tr><td> </td><td>
+    </td><td align="right"> [248 digits] </td><td> </td><td align="right"> 13 </td><td> 
+    </td><td> </td><td> </td><td> 1995 </td><td> </td><td> R. P. Brent 
+</td></tr><tr><td align="right"> 11 </td><td>
+    </td><td align="right"> 39 </td><td> </td><td align="right"> 13 </td><td> 
+    </td><td> </td><td> </td><td> 1899 </td><td> </td><td> A. Cunningham 
+</td></tr><tr><td>  </td><td>
+    </td><td align="right"> 119 </td><td> </td><td align="right"> 13 </td><td> 
+    </td><td> </td><td> </td><td> 1899 </td><td> </td><td> A. Cunningham 
+</td></tr><tr><td>  </td><td>
+    </td><td align="right"> 10253207784531279 </td><td> </td><td align="right"> 14 </td><td> 
+    </td><td> 17 </td><td align="center"> May </td><td> 1988 </td><td> </td><td> R. P. Brent 
+</td></tr><tr><td>  </td><td>
+    </td><td align="right"> 434673084282938711 </td><td> </td><td align="right"> 13 </td><td> 
+    </td><td> 13 </td><td align="center"> May </td><td> 1988 </td><td> </td><td> R. P. Brent 
+</td></tr><tr><td>  </td><td>
+    </td><td align="right"> [560 digits] </td><td> </td><td align="right"> 13 </td><td> 
+    </td><td> 20 </td><td align="center"> Jun </td><td> 1988 </td><td> </td><td> R. P. Brent &amp; F. Morain 
+</td></tr></tbody></table>
+</p><p align="center">
+<table>
+<tbody><tr><td> 46 digit &nbsp;<i>k</i> = 
+    3640431067210880961102244011816628378312190597
+</td></tr><tr><td> 37 digit &nbsp;<i>k</i> = 
+    1137640572563481089664199400165229051
+</td></tr></tbody></table>
+</p><p align="center"> <big> Complete factorizations in standard
+                       notation </big>
+</p><p align="center">
+<table>
+<tbody><tr><td> &nbsp;<i>F</i><sub>5</sub> = 
+ 641 · 6700417 
+</td></tr><tr><td> &nbsp;<i>F</i><sub>6</sub> = 
+ 274177 · 67280421310721 
+</td></tr><tr><td> &nbsp;<i>F</i><sub>7</sub> = 
+ 59649589127497217 · 5704689200685129054721 
+</td></tr><tr><td> &nbsp;<i>F</i><sub>8</sub> = 
+ 1238926361552897 · P62
+</td></tr><tr><td> &nbsp;<i>F</i><sub>9</sub> = 
+ 2424833 · 7455602825647884208337395736200454918783366342657 · P99 
+</td></tr><tr><td> <i>F</i><sub>10</sub> = 
+ 45592577 · 6487031809 · 4659775785220018543264560743076778192897 · P252 
+</td></tr><tr><td> <i>F</i><sub>11</sub> = 
+ 319489 · 974849 · 167988556341760475137 · 3560841906445833920513 · P564 
+</td></tr></tbody></table>
+</p><h3 align="center">
+    <a name="Incomplete"> Factorizations known to be incomplete </a>
+</h3>
+<p align="center">
+<table>
+<tbody><tr><td align="right"> <b><i>m</i></b> </td><td> &nbsp; &nbsp;
+    </td><td align="right"> <b><i>k</i></b> </td><td> &nbsp; &nbsp;
+    </td><td align="right"> <b><i>n</i></b> </td><td> &nbsp; &nbsp; </td><td> </td><td>
+    </td><td> <b> Year </b> </td><td> &nbsp; &nbsp; 
+    </td><td> <b> Discoverer </b> 
+</td></tr><tr><td align="right"> 12 </td><td> 
+    </td><td align="right"> 7 </td><td> </td><td align="right"> 14 </td><td> 
+    </td><td> </td><td> </td><td> 1877 </td><td> </td><td> I. M. Pervushin; E. Lucas 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 397 </td><td> </td><td align="right"> 16 </td><td> 
+    </td><td> </td><td> </td><td> 1903 </td><td> </td><td> A. E. Western 
+</td></tr><tr><td> </td><td> 
+    </td><td align="right"> 973 </td><td> </td><td align="right"> 16 </td><td> 
+    </td><td> </td><td> </td><td> 1903 </td><td> </td><td> A. E. Western 
+</td></tr><tr><td> </td><td> 
+    </td><td align="right"> 11613415 </td><td> </td><td align="right"> 14 </td><td> 
+    </td><td> </td><td> </td><td> 1974 </td><td> </td><td> J. C. Hallyburton &amp; J. Brillhart 
+</td></tr><tr><td> </td><td> 
+    </td><td align="right"> 76668221077 </td><td> </td><td align="right"> 14 </td><td> 
+    </td><td> 25 </td><td align="center"> Jul </td><td> 1986 </td><td> </td><td> R. Baillie 
+</td></tr><tr><td> </td><td> 
+    </td><td align="right"> [50 digits] </td><td> </td><td align="right"> 15 </td><td> 
+    </td><td> 27 </td><td align="center"> Mar </td><td> 2010 </td><td> </td><td> M. Vang, Zimmermann &amp; Kruppa  
+</td></tr><tr><td align="right"> 13 </td><td> 
+    </td><td align="right"> 41365885 </td><td> </td><td align="right"> 16 </td><td> 
+    </td><td> </td><td> </td><td> 1974 </td><td> </td><td> J. C. Hallyburton &amp; J. Brillhart 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 20323554055421 </td><td> </td><td align="right"> 17 </td><td> 
+    </td><td> 05 </td><td align="center"> Jan </td><td> 1991 </td><td> </td><td> R. E. Crandall 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 6872386635861 </td><td> </td><td align="right"> 19 </td><td> 
+    </td><td> 09 </td><td align="center"> May </td><td> 1991 </td><td> </td><td> R. E. Crandall 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 609485665932753836099 </td><td> </td><td align="right"> 19 </td><td>
+    </td><td> 16 </td><td align="center"> Jun </td><td> 1995 </td><td> </td><td> R. P. Brent 
+</td></tr><tr><td align="right"> 14 </td><td> 
+    </td><td align="right"> [49 digits] </td><td> </td><td align="right"> 16 </td><td> 
+    </td><td> 03 </td><td align="center"> Feb </td><td> 2010 </td><td> </td><td> T. Rajala &amp; Woltman  
+</td></tr><tr><td align="right"> 15 </td><td> 
+    </td><td align="right"> 579 </td><td> </td><td align="right"> 21 </td><td> 
+    </td><td> </td><td> </td><td> 1925 </td><td> </td><td> M. B. Kraitchik 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 17753925353 </td><td> </td><td align="right"> 17 </td><td> 
+    </td><td> 04 </td><td align="center"> Aug </td><td> 1987 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 1287603889690528658928101555 </td><td> </td><td align="right"> 17 </td><td> 
+    </td><td> 03 </td><td align="center"> Jul </td><td> 1997 </td><td> </td><td> R. E. Crandall &amp; C. van Halewyn 
+</td></tr><tr><td align="right"> 16 </td><td> 
+    </td><td align="right"> 1575 </td><td> </td><td align="right"> 19 </td><td> 
+    </td><td> 14 </td><td align="center"> Aug </td><td> 1953 </td><td> </td><td> J. L. Selfridge 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 180227048850079840107 </td><td> </td><td align="right"> 20 </td><td> 
+    </td><td> </td><td align="center"> Dec </td><td> 1996 </td><td> </td><td> R. E. Crandall &amp; K. Dilcher 
+</td></tr><tr><td align="right"> 17 </td><td> 
+    </td><td align="right"> 59251857 </td><td> </td><td align="right"> 19 </td><td> 
+    </td><td> </td><td align="center"> May </td><td> 1978 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> [44 digits] </td><td> </td><td align="right"> 19 </td><td> 
+    </td><td> 15 </td><td align="center"> Mar </td><td> 2011 </td><td> </td><td> D. Bessell &amp; Woltman 
+</td></tr><tr><td align="right"> 18 </td><td> 
+    </td><td align="right"> 13 </td><td> </td><td align="right"> 20 </td><td> 
+    </td><td> </td><td> </td><td> 1903 </td><td> </td><td> A. E. Western (Prime: P. Seelhoff 1886)
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 9688698137266697 </td><td> </td><td align="right"> 23 </td><td> 
+    </td><td> 16 </td><td align="center"> Apr </td><td> 1999 </td><td> 
+    </td><td> R. E. Crandall, R. J. McIntosh &amp; C. Tardif
+</td></tr><tr><td align="right"> 19 </td><td> 
+    </td><td align="right"> 33629 </td><td> </td><td align="right"> 21 </td><td> 
+    </td><td> 16 </td><td align="center"> Nov </td><td> 1962 </td><td> </td><td> H. Riesel 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 308385 </td><td> </td><td align="right"> 21 </td><td> 
+    </td><td> </td><td> </td><td> 1963 </td><td> </td><td> C. P. Wrathall 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 8962167624028624126082526703 </td><td> </td><td align="right"> 22 </td><td> 
+    </td><td> 18 </td><td align="center"> Jul </td><td> 2009 </td><td> </td><td> D. Bessell &amp; Woltman 
+</td></tr><tr><td align="right">20</td><td> 
+    </td><td align="right"> [54 digits] </td><td> </td><td align="right">22</td><td> 
+    </td><td>22</td><td align="center">Jun</td><td> 2021 </td><td> </td><td> 	D. Bessell &amp; Woltman  
+</td></tr><tr><td align="right"> 21 </td><td> 
+    </td><td align="right"> 534689 </td><td> </td><td align="right"> 23 </td><td> 
+    </td><td> </td><td> </td><td> 1963 </td><td> </td><td> C. P. Wrathall 
+</td></tr><tr><td align="right"> 22 </td><td> 
+    </td><td align="right"> 3853959202444067657533632211 </td><td> </td><td align="right"> 24 </td><td> 
+    </td><td> 26 </td><td align="center"> Mar </td><td> 2010 </td><td> </td><td> D. Bessell &amp; Woltman 
+</td></tr><tr><td align="right"> 23 </td><td> 
+    </td><td align="right"> 5 </td><td> </td><td align="right"> 25 </td><td> 
+    </td><td> </td><td> </td><td> 1878 </td><td> </td><td> I. M. Pervushin 
+</td></tr><tr><td align="right"> 25 </td><td> 
+    </td><td align="right"> 48413 </td><td> </td><td align="right"> 29 </td><td> 
+    </td><td> </td><td> </td><td> 1963 </td><td> </td><td> C. P. Wrathall 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 1522849979 </td><td> </td><td align="right"> 27 </td><td> 
+    </td><td> &nbsp;07 </td><td align="center"> Aug </td><td> 1985 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 16168301139 </td><td> </td><td align="right"> 27 </td><td> 
+    </td><td> 16 </td><td align="center"> Dec </td><td> 1987 </td><td> </td><td> P. B. McLaughlin 
+</td></tr><tr><td align="right"> 26 </td><td> 
+    </td><td align="right"> 143165 </td><td> </td><td align="right"> 29 </td><td> 
+    </td><td> </td><td> </td><td> 1963 </td><td> </td><td> C. P. Wrathall 
+</td></tr><tr><td align="right"> 27 </td><td> 
+    </td><td align="right"> 141015 </td><td> </td><td align="right"> 30 </td><td> 
+    </td><td> </td><td> </td><td> 1963 </td><td> </td><td> C. P. Wrathall 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 430816215 </td><td> </td><td align="right"> 29 </td><td> 
+    </td><td> 21 </td><td align="center"> Feb </td><td> 1985 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 28 </td><td> 
+    </td><td align="right"> 25709319373 </td><td> </td><td align="right"> 36 </td><td> 
+    </td><td> 05 </td><td align="center"> Feb </td><td> 1997 </td><td> </td><td> T. Taura 
+</td></tr><tr><td align="right"> 29 </td><td> 
+    </td><td align="right"> 1120049 </td><td> </td><td align="right"> 31 </td><td> 
+    </td><td> 17 </td><td align="center"> Oct </td><td> 1980 </td><td>
+    </td><td> G. B. Gostin &amp; P. B. McLaughlin 
+</td></tr><tr><td align="right"> 30 </td><td> 
+    </td><td align="right"> 149041 </td><td> </td><td align="right"> 32 </td><td> 
+    </td><td> </td><td> </td><td> 1963 </td><td> </td><td> C. P. Wrathall 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 127589 </td><td> </td><td align="right"> 33 </td><td> 
+    </td><td> </td><td> </td><td> 1963 </td><td> </td><td> C. P. Wrathall 
+</td></tr></tbody></table>
+</p><p align="center">
+<table>
+<tbody><tr><td> 50 digit &nbsp;<i>k</i> = 17353230210429594579133099699123162989482444520899 
+</td></tr><tr><td> 49 digit &nbsp;<i>k</i> = 1784180997819127957596374417642156545110881094717 
+</td></tr><tr><td> 44 digit &nbsp;<i>k</i> = 14783975791554494074552473179612897725474511 
+</td></tr><tr><td> 54 digit &nbsp;<i>k</i> = 596364305992637846192344607121343233909722051415131569 
+</td></tr></tbody></table>
+
+</p><p align="center"> <big> Incomplete factorizations in standard notation </big>
+</p><p align="center">
+<table>
+<tbody><tr><td> <i>F</i><sub>12</sub> = 
+ 114689 · 26017793 · 63766529 · 190274191361 · 1256132134125569 · 
+</td></tr><tr><td align="right"> 568630647535356955169033410940867804839360742060818433 · C1133 
+</td></tr><tr><td> <i>F</i><sub>13</sub> = 
+2710954639361 · 2663848877152141313 · 3603109844542291969 ·
+</td></tr><tr><td align="right"> 319546020820551643220672513 · C2391 
+</td></tr><tr><td> <i>F</i><sub>14</sub> = 
+116928085873074369829035993834596371340386703423373313 · C4880 
+</td></tr><tr><td> <i>F</i><sub>15</sub> = 
+1214251009 · 2327042503868417 · 168768817029516972383024127016961 · C9808 
+</td></tr><tr><td> <i>F</i><sub>16</sub> = 
+ 825753601 · 188981757975021318420037633 · C19694 
+</td></tr><tr><td> <i>F</i><sub>17</sub> = 
+ 31065037602817 · 
+</td></tr><tr><td align="right"> 7751061099802522589358967058392886922693580423169 · C39395 
+</td></tr><tr><td> <i>F</i><sub>18</sub> = 
+ 13631489 · 81274690703860512587777 · C78884 
+</td></tr><tr><td> <i>F</i><sub>19</sub> = 
+ 70525124609 · 646730219521 · 37590055514133754286524446080499713 · C157770 
+</td></tr><tr><td> <i>F</i><sub>20</sub> = 
+ 2501333194082144888835935755027478411360482839138692000382977 · C315593 
+</td></tr><tr><td> <i>F</i><sub>21</sub> = 
+ 4485296422913 · C631294 
+</td></tr><tr><td> <i>F</i><sub>22</sub> = 
+ 64658705994591851009055774868504577 · C1262577 
+</td></tr><tr><td> <i>F</i><sub>23</sub> = 
+ 167772161 · C2525215 
+</td></tr><tr><td> <i>F</i><sub>24</sub> = &nbsp;<b>C</b>5050446
+</td></tr><tr><td> <i>F</i><sub>25</sub> = 
+ 25991531462657 · 204393464266227713 · 2170072644496392193 · C10100842
+</td></tr><tr><td> <i>F</i><sub>26</sub> = 
+ 76861124116481 · C20201768
+</td></tr><tr><td> <i>F</i><sub>27</sub> = 
+ 151413703311361 · 231292694251438081 · C40403531
+</td></tr><tr><td> <i>F</i><sub>28</sub> = 
+ 1766730974551267606529 · C80807103
+</td></tr><tr><td> <i>F</i><sub>29</sub> = 
+ 2405286912458753 · C161614233
+</td></tr><tr><td> <i>F</i><sub>30</sub> = 
+ 640126220763137 · 1095981164658689 · C323228467
+</td></tr></tbody></table>
+</p><h3 align="center">
+    <a name="Composite"> Composite Fermat numbers
+    &nbsp;<i>F<sub>m</sub></i>&nbsp; without known factor </a>
+</h3>
+<p align="center">
+<table>
+<tbody><tr><td align="right"> <b><i>m</i></b> </td><td> &nbsp; &nbsp;
+    </td><td align="right"> <b> Digits </b> </td><td> &nbsp; &nbsp; 
+    </td><td align="right"> <b> Year </b> </td><td> &nbsp; &nbsp; 
+    </td><td> <b> Earliest prover </b> 
+</td></tr><tr><td align="right"> 24 </td><td> </td><td align="right"> &nbsp;5050446 </td><td> 
+    </td><td align="right"> 1999 </td><td>
+    </td><td> E. W. Mayer, J. S. Papadopoulos &amp; R. E. Crandall 
+</td></tr></tbody></table>
+</p><h3 align="center">
+    <a name="Cofactors">Largest cofactors known to be composite</a>
+</h3>
+<p align="center">
+<table>
+<tbody><tr><td align="right"> <b><i>m</i></b> </td><td> &nbsp; &nbsp;
+    </td><td align="right"> <b> Digits </b> </td><td> &nbsp; &nbsp; 
+    </td><td align="right"> <b> Year </b> </td><td> &nbsp; &nbsp; 
+    </td><td> <b> Earliest prover </b> 
+</td></tr><tr><td align="right"> 21 </td><td> </td><td align="right"> 631294 </td><td> 
+    </td><td align="right"> 1993 </td><td> 
+    </td><td> R. E. Crandall, J. Doenias, C. Norrie &amp; J. Young 
+</td></tr><tr><td align="right"> 22 </td><td> </td><td align="right"> 1262577 </td><td> 
+    </td><td align="right"> 2010 </td><td> 
+    </td><td> D. Domanov; S. Yamada 
+</td></tr><tr><td align="right"> 23 </td><td> </td><td align="right"> 2525215 </td><td> 
+    </td><td align="right"> 2000 </td><td> 
+    </td><td> E. W. Mayer, J. S. Papadopoulos &amp; R. E. Crandall 
+</td></tr><tr><td align="right"> 25 </td><td> </td><td align="right"> 10100842 </td><td> 
+    </td><td align="right"> 2009 </td><td> 
+    </td><td> S. Yamada; A. Höglund 
+</td></tr><tr><td align="right"> 26 </td><td> </td><td align="right"> 20201768 </td><td> 
+    </td><td align="right"> 2009 </td><td> 
+    </td><td> A. Höglund 
+</td></tr><tr><td align="right"> 27 </td><td> </td><td align="right"> 40403531 </td><td> 
+    </td><td align="right"> 2010 </td><td> 
+    </td><td> A. Höglund  
+</td></tr><tr><td align="right"> 28 </td><td> </td><td align="right"> 80807103 </td><td> 
+    </td><td align="right"> 2022 </td><td> 
+    </td><td> E. W. Mayer 
+</td></tr><tr><td align="right"> 29 </td><td> </td><td align="right"> &nbsp;161614233 </td><td> 
+    </td><td align="right"> 2022 </td><td> 
+    </td><td> E. W. Mayer 
+</td></tr><tr><td align="right"> 30 </td><td> </td><td align="right"> &nbsp;323228467 </td><td> 
+    </td><td align="right"> 2022 </td><td> 
+    </td><td> E. W. Mayer 
+</td></tr></tbody></table>
+</p><p align="center">
+</p><p align="center">
+For an evaluation of the “Proof Strengths”, please refer to 
+<a href="https://www.mersenneforum.org/showpost.php?p=631583&amp;postcount=16">this</a> report.
+</p><p align="center">
+<font size="4"></font>
+</p><h3 align="center">
+    <a name="Larger"> Prime factors
+    &nbsp;<i>k</i> · 2<sup><i>n</i></sup> + 1&nbsp;
+    of larger Fermat numbers &nbsp;<i>F<sub>m</sub></i> </a>
+</h3>
+<p align="center">
+<table>
+<tbody><tr><td align="right"> <b><i>m</i></b> </td><td> &nbsp; &nbsp;
+    </td><td align="right"> <b><i>k</i></b> </td><td> &nbsp; &nbsp;
+    </td><td align="right"> <b><i>n</i></b> </td><td> &nbsp; &nbsp;
+    </td><td> </td><td> </td><td> <b> Year </b> </td><td> &nbsp; &nbsp; 
+    </td><td> <b> Discoverer </b> 
+</td></tr><tr><td align="right"> 31 </td><td> 
+    </td><td align="right"> 5463561471303 </td><td> </td><td align="right"> 33 </td><td> 
+    </td><td> 12 </td><td align="center"> Apr </td><td> 2001 </td><td> </td><td> A. Kruppa &amp; T. Forbes 
+</td></tr><tr><td align="right"> 32 </td><td> 
+    </td><td align="right"> 1479 </td><td> </td><td align="right"> 34 </td><td> 
+    </td><td> </td><td> </td><td> 1963 </td><td> </td><td> C. P. Wrathall 
+</td></tr><tr><td align="right"> 36 </td><td> 
+    </td><td align="right"> 5 </td><td> </td><td align="right"> 39 </td><td> 
+    </td><td> </td><td> </td><td> 1886 </td><td> </td><td> P. Seelhoff 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 3759613 </td><td> </td><td align="right"> 38 </td><td> 
+    </td><td> 02 </td><td align="center"> Jan </td><td> 1981 </td><td>
+    </td><td> G. B. Gostin &amp; P. B. McLaughlin 
+</td></tr><tr><td align="right"> 37 </td><td> 
+    </td><td align="right"> 1275438465 </td><td> </td><td align="right"> 39 </td><td> 
+    </td><td> 29 </td><td align="center"> Apr </td><td> 1991 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 38 </td><td> 
+    </td><td align="right"> 3 </td><td> </td><td align="right"> 41 </td><td> 
+    </td><td> </td><td> </td><td> 1903 </td><td>
+    </td><td> J. Cullen &amp; A. Cunningham; A. E. Western 
+</td></tr><tr><td>  </td><td>  
+    </td><td align="right"> 2653 </td><td> </td><td align="right"> 40 </td><td> 
+    </td><td> </td><td> </td><td> 1963 </td><td> </td><td> C. P. Wrathall 
+</td></tr><tr><td align="right"> 39 </td><td> 
+    </td><td align="right"> 21 </td><td> </td><td align="right"> 41 </td><td> 
+    </td><td> </td><td> </td><td> 1956 </td><td> </td><td> R. M. Robinson 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 2864929972774011 </td><td> </td><td align="right"> 41 </td><td> 
+    </td><td> 07 </td><td align="center"> Dec </td><td> 2012 </td><td> </td><td> T. Rajala &amp; Woltman 
+</td></tr><tr><td align="right"> 40 </td><td> 
+    </td><td align="right"> 74327396788321657 </td><td> </td><td align="right"> 42 </td><td> 
+    </td><td> 01 </td><td align="center"> Mar </td><td> 2021 </td><td> </td><td> L. Morelli &amp; Woltman 
+</td></tr><tr><td align="right"> 41 </td><td> 
+    </td><td align="right"> 30792107213272383425 </td><td> </td><td align="right"> 43 </td><td> 
+    </td><td> 03 </td><td align="center"> Jul </td><td> 2024 </td><td> </td><td> E. Doescher &amp; Woltman 
+</td></tr><tr><td align="right"> 42 </td><td> 
+    </td><td align="right"> 43485 </td><td> </td><td align="right"> 45 </td><td> 
+    </td><td> </td><td> </td><td> 1963 </td><td> </td><td> C. P. Wrathall 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 111318179143061 </td><td> </td><td align="right"> 45 </td><td> 
+    </td><td> 20 </td><td align="center"> Mar </td><td> 2011 </td><td> </td><td> R. Maznichenko &amp; Rodenkirch 
+</td></tr><tr><td align="right"> 43 </td><td> 
+    </td><td align="right"> 212675402445 </td><td> </td><td align="right"> 45 </td><td> 
+    </td><td> 23 </td><td align="center"> Dec </td><td> 2000 </td><td> </td><td> P. Samidoost &amp; Durman 
+</td></tr><tr><td align="right"> 47 </td><td> 
+    </td><td align="right"> 27 </td><td> </td><td align="right"> 50 </td><td> 
+    </td><td> 
+    </td><td> 
+    </td><td> 1963 </td><td> </td><td> C. P. Wrathall 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 2601384975 </td><td> </td><td align="right"> 49 </td><td> 
+    </td><td> 30 </td><td align="center"> Apr </td><td> 1991 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 48 </td><td> 
+    </td><td align="right"> 2139543641769 </td><td> </td><td align="right"> 50 </td><td> 
+    </td><td> 28 </td><td align="center"> May </td><td> 2001 </td><td> </td><td> M. Bodschwinna &amp; Durman 
+</td></tr><tr><td align="right"> 52 </td><td> 
+    </td><td align="right"> 4119 </td><td> </td><td align="right"> 54 </td><td> 
+    </td><td> </td><td> </td><td> 1963 </td><td> </td><td> C. P. Wrathall 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 21626655 </td><td> </td><td align="right"> 54 </td><td> 
+    </td><td> </td><td> </td><td> 1982 </td><td> </td><td> W. Keller 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 81909357657279 </td><td> </td><td align="right"> 54 </td><td> 
+    </td><td> 15 </td><td align="center"> Mar </td><td> 2010 </td><td> </td><td> C. Vonck &amp; Durman 
+</td></tr><tr><td align="right"> 55 </td><td> 
+    </td><td align="right"> 29 </td><td> </td><td align="right"> 57 </td><td> 
+    </td><td> </td><td> </td><td> 1956 </td><td> </td><td> R. M. Robinson 
+</td></tr><tr><td align="right"> 58 </td><td> 
+    </td><td align="right"> 95 </td><td> </td><td align="right"> 61 </td><td> 
+    </td><td> </td><td> </td><td> 1957 </td><td> </td><td> R. M. Robinson 
+</td></tr><tr><td align="right"> 61 </td><td> 
+    </td><td align="right"> 54985063 </td><td> </td><td align="right"> 66 </td><td> 
+    </td><td> 17 </td><td align="center"> May </td><td> 1986 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 62 </td><td> 
+    </td><td align="right"> 697 </td><td> </td><td align="right"> 64 </td><td> 
+    </td><td> </td><td> </td><td> 1977 </td><td> </td><td> D. E. Shippee 
+</td></tr><tr><td align="right"> 63 </td><td> 
+    </td><td align="right"> 9 </td><td> </td><td align="right"> 67 </td><td> 
+    </td><td> </td><td> </td><td> 1956 </td><td> </td><td> R. M. Robinson 
+</td></tr><tr><td align="right"> 64 </td><td> 
+    </td><td align="right"> 17853639 </td><td> </td><td align="right"> 67 </td><td> 
+    </td><td> 13 </td><td align="center"> May </td><td> 1986 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 65 </td><td> 
+    </td><td align="right"> 1210895760431083 </td><td> </td><td align="right"> 68 </td><td> 
+    </td><td> 29 </td><td align="center"> Jan </td><td> 2013 </td><td> </td><td> R. Maznichenko &amp; Woltman 
+</td></tr><tr><td align="right"> 66 </td><td> 
+    </td><td align="right"> 7551 </td><td> </td><td align="right"> 69 </td><td> 
+    </td><td> </td><td> </td><td> 1977 </td><td> </td><td> D. E. Shippee 
+</td></tr><tr><td align="right"> 70 </td><td> 
+    </td><td align="right"> 3823 </td><td> </td><td align="right"> 72 </td><td> 
+    </td><td> </td><td> </td><td> 1977 </td><td> </td><td> D. E. Shippee 
+</td></tr><tr><td align="right"> 71 </td><td> 
+    </td><td align="right"> 683 </td><td> </td><td align="right"> 73 </td><td> 
+    </td><td> </td><td> </td><td> 1977 </td><td> </td><td> D. E. Shippee 
+</td></tr><tr><td align="right"> 72 </td><td> 
+    </td><td align="right"> 76432329 </td><td> </td><td align="right"> 74 </td><td> 
+    </td><td> 31 </td><td align="center"> May </td><td> 1986 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 73 </td><td> 
+    </td><td align="right"> 5 </td><td> </td><td align="right"> 75 </td><td> 
+    </td><td> </td><td> </td><td> 1906 </td><td> </td><td> J. C. Morehead 
+</td></tr><tr><td align="right"> 75 </td><td> 
+    </td><td align="right"> 3447431 </td><td> </td><td align="right"> 77 </td><td> 
+    </td><td>  </td><td align="center"> Apr </td><td> 1982 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 77 </td><td> 
+    </td><td align="right"> 425 </td><td> </td><td align="right"> 79 </td><td> 
+    </td><td> </td><td> </td><td> 1957 </td><td> </td><td> R. M. Robinson &amp; J. L. Selfridge 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 5940341195 </td><td> </td><td align="right"> 79 </td><td> 
+    </td><td> 08 </td><td align="center"> Apr </td><td> 1998 </td><td> </td><td> T. Taura 
+</td></tr><tr><td align="right"> 81 </td><td> 
+    </td><td align="right"> 271 </td><td> </td><td align="right"> 84 </td><td> 
+    </td><td> </td><td> </td><td> 1957 </td><td> </td><td> R. M. Robinson &amp; J. L. Selfridge 
+</td></tr><tr><td align="right"> 83 </td><td> 
+    </td><td align="right"> 1595863660157 </td><td> </td><td align="right"> 87 </td><td> 
+    </td><td> 12 </td><td align="center"> May </td><td> 2005 </td><td> </td><td> V. A. Danilov &amp; Durman 
+</td></tr><tr><td align="right"> 86 </td><td> 
+    </td><td align="right"> 20018578522347 </td><td> </td><td align="right"> 88 </td><td> 
+    </td><td> 07 </td><td align="center"> Jun </td><td> 2012 </td><td> </td><td> M. Dangler &amp; Rodenkirch 
+</td></tr><tr><td align="right"> 88 </td><td> 
+    </td><td align="right"> 119942751127 </td><td> </td><td align="right"> 90 </td><td> 
+    </td><td> 13 </td><td align="center"> Mar </td><td> 2001 </td><td> </td><td> T. Nohara &amp; Durman 
+</td></tr><tr><td align="right"> 90 </td><td> 
+    </td><td align="right"> 198922467387 </td><td> </td><td align="right"> 92 </td><td> 
+    </td><td> 26 </td><td align="center"> Mar </td><td> 2001 </td><td> </td><td> P. Grobstich &amp; Durman 
+</td></tr><tr><td align="right"> 91 </td><td> 
+    </td><td align="right"> 1421 </td><td> </td><td align="right"> 93 </td><td> 
+    </td><td> </td><td> </td><td> 1977 </td><td> </td><td> D. E. Shippee 
+</td></tr><tr><td align="right"> 93 </td><td> 
+    </td><td align="right"> 92341 </td><td> </td><td align="right"> 96 </td><td> 
+    </td><td> </td><td> </td><td> 1979 </td><td> </td><td> R. Baillie 
+</td></tr><tr><td align="right"> 94 </td><td> 
+    </td><td align="right"> 482524552001 </td><td> </td><td align="right"> 97 </td><td> 
+    </td><td> 18 </td><td align="center"> Apr </td><td> 2001 </td><td> </td><td> P. Grobstich &amp; Durman 
+</td></tr><tr><td align="right"> 96 </td><td> 
+    </td><td align="right"> 3334131633063 </td><td> </td><td align="right"> 101 </td><td> 
+    </td><td> 25 </td><td align="center"> Nov </td><td> 2008 </td><td> </td><td> M. Ptáček &amp; Durman 
+</td></tr><tr><td align="right"> 99 </td><td> 
+    </td><td align="right"> 16233 </td><td> </td><td align="right"> 104 </td><td> 
+    </td><td>  </td><td align="center"> Nov </td><td> 1979 </td><td>
+    </td><td> G. B. Gostin &amp; P. B. McLaughlin;
+</td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td>
+    </td><td> H. Suyama 
+</td></tr><tr><td align="right"> 102 </td><td> 
+    </td><td align="right"> 627 </td><td> </td><td align="right"> 106 </td><td> 
+    </td><td> </td><td> </td><td> 1964 </td><td> </td><td> R. M. Robinson &amp; J. L. Selfridge 
+</td></tr><tr><td align="right"> 103 </td><td> 
+    </td><td align="right"> 7595155767819149 </td><td> </td><td align="right"> 105 </td><td> 
+    </td><td> 31 </td><td align="center"> Dec </td><td> 2020 </td><td> </td><td> P. Strasser &amp; Woltman
+</td></tr><tr><td align="right"> 107 </td><td> 
+    </td><td align="right"> 1289179925 </td><td> </td><td align="right"> 111 </td><td> 
+    </td><td> 08 </td><td align="center"> Nov </td><td> 1992 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 116 </td><td> 
+    </td><td align="right"> 3433149787 </td><td> </td><td align="right"> 120 </td><td> 
+    </td><td> 08 </td><td align="center"> Aug </td><td> 1999 </td><td> </td><td> T. Taura 
+</td></tr><tr><td align="right"> 117 </td><td> 
+    </td><td align="right"> 7 </td><td> </td><td align="right"> 120 </td><td> 
+    </td><td> </td><td> </td><td> 1956 </td><td> </td><td> R. M. Robinson 
+</td></tr><tr><td align="right"> 118 </td><td> 
+    </td><td align="right"> 1527888802614951 </td><td> </td><td align="right"> 120 </td><td> 
+    </td><td> 28 </td><td align="center"> Jan </td><td> 2019 </td><td> </td><td> P. Strasser &amp; Woltman
+</td></tr><tr><td align="right"> 122 </td><td> 
+    </td><td align="right"> 5234775 </td><td> </td><td align="right"> 124 </td><td> 
+    </td><td> 21 </td><td align="center"> May </td><td> 1986 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 125 </td><td> 
+    </td><td align="right"> 5 </td><td> </td><td align="right"> 127 </td><td> 
+    </td><td> </td><td> </td><td> 1956 </td><td> </td><td> R. M. Robinson 
+</td></tr><tr><td align="right"> 128 </td><td> 
+    </td><td align="right"> 758423289 </td><td> </td><td align="right"> 134 </td><td> 
+    </td><td> 09 </td><td align="center"> Feb </td><td> 2011 </td><td> </td><td> P. Strasser &amp; Woltman 
+</td></tr><tr><td align="right"> 131 </td><td> 
+    </td><td align="right"> 2969126073453 </td><td> </td><td align="right"> 133 </td><td> 
+    </td><td> 23 </td><td align="center"> Mar </td><td> 2012 </td><td> </td><td> A. Sen &amp; Rodenkirch 
+</td></tr><tr><td align="right"> 132 </td><td> 
+    </td><td align="right"> 1075441212722595 </td><td> </td><td align="right"> 135 </td><td> 
+    </td><td> 19 </td><td align="center"> Dec </td><td> 2018 </td><td> </td><td> P. Strasser &amp; Woltman
+</td></tr><tr><td align="right"> 133 </td><td> 
+    </td><td align="right"> 88075576149 </td><td> </td><td align="right"> 135 </td><td> 
+    </td><td> 24 </td><td align="center"> Jul </td><td> 2001 </td><td> </td><td> P. Samidoost &amp; Durman 
+</td></tr><tr><td align="right"> 142 </td><td> 
+    </td><td align="right"> 8152599 </td><td> </td><td align="right"> 145 </td><td> 
+    </td><td> 22 </td><td align="center"> May </td><td> 1986 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 144 </td><td> 
+    </td><td align="right"> 17 </td><td> </td><td align="right"> 147 </td><td> 
+    </td><td> </td><td> </td><td> 1956 </td><td> </td><td> R. M. Robinson 
+</td></tr><tr><td align="right"> 146 </td><td> 
+    </td><td align="right"> 37092477 </td><td> </td><td align="right"> 148 </td><td> 
+    </td><td> 23 </td><td align="center"> Dec </td><td> 1987 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 147 </td><td> 
+    </td><td align="right"> 3125 </td><td> </td><td align="right"> 149 </td><td> 
+    </td><td>  </td><td align="center"> Dec </td><td> 1979 </td><td> 
+    </td><td> G. B. Gostin &amp; P. B. McLaughlin 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 124567335 </td><td> </td><td align="right"> 149 </td><td> 
+    </td><td> 01 </td><td align="center"> Dec </td><td> 1990 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 150 </td><td> 
+    </td><td align="right"> 1575 </td><td> </td><td align="right"> 157 </td><td> 
+    </td><td> </td><td> </td><td> 1956 </td><td> </td><td> R. M. Robinson 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 5439 </td><td> </td><td align="right"> 154 </td><td> 
+    </td><td> </td><td align="center"> May </td><td> 1980 </td><td> 
+    </td><td> G. B. Gostin &amp; P. B. McLaughlin; 
+</td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td>
+    </td><td> H. Suyama 
+</td></tr><tr><td align="right"> 160 </td><td> 
+    </td><td align="right"> 43390164659167 </td><td> </td><td align="right"> 164 </td><td> 
+    </td><td> 27 </td><td align="center"> Jul </td><td> 2023 </td><td> </td><td> E. Doescher 
+</td></tr><tr><td align="right"> 164 </td><td> 
+    </td><td align="right"> 1835601567 </td><td> </td><td align="right"> 167 </td><td> 
+    </td><td> 31 </td><td align="center"> May </td><td> 1993 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 166 </td><td> 
+    </td><td align="right"> 2674670937447 </td><td> </td><td align="right"> 171 </td><td> 
+    </td><td> 10 </td><td align="center"> Jul </td><td> 2012 </td><td> </td><td> R. Maznichenko &amp; Rodenkirch 
+</td></tr><tr><td align="right"> 172 </td><td> 
+    </td><td align="right"> 20569603303 </td><td> </td><td align="right"> 174 </td><td> 
+    </td><td> 11 </td><td align="center"> May </td><td> 2001 </td><td> </td><td> L. N. Durman 
+</td></tr><tr><td align="right"> 178 </td><td> 
+    </td><td align="right"> 313047661 </td><td> </td><td align="right"> 180 </td><td> 
+    </td><td> 18 </td><td align="center"> Jun </td><td> 1991 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 184 </td><td> 
+    </td><td align="right"> 117012935 </td><td> </td><td align="right"> 187 </td><td> 
+    </td><td> 17 </td><td align="center"> Dec </td><td> 1990 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 195 </td><td> 
+    </td><td align="right"> 48595346636925 </td><td> </td><td align="right"> 197 </td><td> 
+    </td><td> 26 </td><td align="center"> Jun </td><td> 2014 </td><td> </td><td> S. Batalov &amp; G. F. Woltman 
+</td></tr><tr><td align="right"> 201 </td><td> 
+    </td><td align="right"> 4845 </td><td> </td><td align="right"> 204 </td><td> 
+    </td><td> 27 </td><td align="center"> Jul </td><td> 1980 </td><td>
+    </td><td> G. B. Gostin &amp; P. B. McLaughlin 
+</td></tr><tr><td align="right"> 205 </td><td> 
+    </td><td align="right"> 232905 </td><td> </td><td align="right"> 207 </td><td> 
+    </td><td> 01 </td><td align="center"> Jan </td><td> 1984 </td><td> </td><td> W. Keller 
+</td></tr><tr><td align="right"> 207 </td><td> 
+    </td><td align="right"> 3 </td><td> </td><td align="right"> 209 </td><td> 
+    </td><td> </td><td> </td><td> 1956 </td><td> </td><td> R. M. Robinson 
+</td></tr><tr><td align="right"> 215 </td><td> 
+    </td><td align="right"> 32111 </td><td> </td><td align="right"> 217 </td><td> 
+    </td><td> 02 </td><td align="center"> Dec </td><td> 1980 </td><td> </td><td> H. Suyama 
+</td></tr><tr><td align="right"> 226 </td><td> 
+    </td><td align="right"> 15 </td><td> </td><td align="right"> 229 </td><td> 
+    </td><td> </td><td> </td><td> 1956 </td><td> </td><td> R. M. Robinson 
+</td></tr><tr><td align="right"> 228 </td><td> 
+    </td><td align="right"> 29 </td><td> </td><td align="right"> 231 </td><td> 
+    </td><td> </td><td> </td><td> 1956 </td><td> </td><td> R. M. Robinson 
+</td></tr><tr><td align="right"> 230 </td><td> 
+    </td><td align="right"> 372236097 </td><td> </td><td align="right"> 232 </td><td> 
+    </td><td> 13 </td><td align="center"> Apr </td><td> 2000 </td><td> </td><td> L. N. Durman 
+</td></tr><tr><td align="right"> 232 </td><td> 
+    </td><td align="right"> 70899775 </td><td> </td><td align="right"> 236 </td><td> 
+    </td><td> 24 </td><td align="center"> Nov </td><td> 1991 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 250 </td><td> 
+    </td><td align="right"> 403 </td><td> </td><td align="right"> 252 </td><td> 
+    </td><td> </td><td> </td><td> 1957 </td><td> </td><td> R. M. Robinson &amp; J. L. Selfridge 
+</td></tr><tr><td align="right"> 251 </td><td> 
+    </td><td align="right"> 85801657 </td><td> </td><td align="right"> 254 </td><td> 
+    </td><td> 30 </td><td align="center"> Nov </td><td> 1991 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right">  </td><td> 
+    </td><td align="right"> 322072887044529 </td><td> </td><td align="right"> 253 </td><td> 
+    </td><td> 24 </td><td align="center"> May </td><td> 2024 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 255 </td><td> 
+    </td><td align="right"> 629 </td><td> </td><td align="right"> 257 </td><td> 
+    </td><td> </td><td> </td><td> 1979 </td><td> </td><td> R. Baillie 
+</td></tr><tr><td align="right"> 256 </td><td> 
+    </td><td align="right"> 36986355 </td><td> </td><td align="right"> 258 </td><td> 
+    </td><td> 20 </td><td align="center"> Jan </td><td> 1991 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 259 </td><td> 
+    </td><td align="right"> 36654265 </td><td> </td><td align="right"> 262 </td><td> 
+    </td><td> 21 </td><td align="center"> Jan </td><td> 1991 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 267 </td><td> 
+    </td><td align="right"> 177 </td><td> </td><td align="right"> 271 </td><td> 
+    </td><td> </td><td> </td><td> 1957 </td><td> </td><td> R. M. Robinson &amp; J. L. Selfridge 
+</td></tr><tr><td align="right"> 268 </td><td> 
+    </td><td align="right"> 21 </td><td> </td><td align="right"> 276 </td><td> 
+    </td><td> </td><td> </td><td> 1956 </td><td> </td><td> R. M. Robinson 
+</td></tr><tr><td align="right"> 274 </td><td> 
+    </td><td align="right"> 58130105122923 </td><td> </td><td align="right"> 277 </td><td> 
+    </td><td> 05 </td><td align="center"> Apr </td><td> 2018 </td><td> </td><td> R. Maznichenko 
+</td></tr><tr><td align="right"> 275 </td><td> 
+    </td><td align="right"> 22347 </td><td> </td><td align="right"> 279 </td><td> 
+    </td><td> 16 </td><td align="center"> Jan </td><td> 1984 </td><td> </td><td> W. Keller 
+</td></tr><tr><td align="right"> 284 </td><td> 
+    </td><td align="right"> 7 </td><td> </td><td align="right"> 290 </td><td> 
+    </td><td> </td><td> </td><td> 1956 </td><td> </td><td> R. M. Robinson 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 1061341513 </td><td> </td><td align="right"> 286 </td><td> 
+    </td><td> 25 </td><td align="center"> Dec </td><td> 2000 </td><td> </td><td> L. N. Durman 
+</td></tr><tr><td align="right"> 286 </td><td> 
+    </td><td align="right"> 78472588395 </td><td> </td><td align="right"> 288 </td><td> 
+    </td><td> 02 </td><td align="center"> Nov </td><td> 2002 </td><td> </td><td> V. A. Danilov &amp; Durman 
+</td></tr><tr><td align="right"> 287 </td><td> 
+    </td><td align="right"> 5915 </td><td> </td><td align="right"> 289 </td><td> 
+    </td><td> 26 </td><td align="center"> Dec </td><td> 1980 </td><td> </td><td> H. Suyama 
+</td></tr><tr><td align="right">  </td><td> 
+    </td><td align="right"> 8662575142599 </td><td> </td><td align="right"> 289 </td><td> 
+    </td><td> 28 </td><td align="center"> Nov </td><td> 2016 </td><td> </td><td> R. Maznichenko
+</td></tr><tr><td align="right">  </td><td> 
+    </td><td align="right"> 21346190509623 </td><td> </td><td align="right"> 290 </td><td> 
+    </td><td> 25 </td><td align="center"> Dec </td><td> 2015 </td><td> </td><td> R. Maznichenko
+</td></tr><tr><td align="right"> 297 </td><td> 
+    </td><td align="right"> 72677552745 </td><td> </td><td align="right"> 301 </td><td> 
+    </td><td> 13 </td><td align="center"> Feb </td><td> 2003 </td><td> </td><td> V. A. Danilov &amp; Durman 
+</td></tr><tr><td align="right"> 298 </td><td> 
+    </td><td align="right"> 247 </td><td> </td><td align="right"> 302 </td><td> 
+    </td><td> </td><td> </td><td> 1979 </td><td> </td><td> R. Baillie 
+</td></tr><tr><td align="right"> 299 </td><td> 
+    </td><td align="right"> 272392805475 </td><td> </td><td align="right"> 304 </td><td> 
+    </td><td> 20 </td><td align="center"> Nov </td><td> 2010 </td><td> </td><td> A. V. Komkov 
+</td></tr><tr><td align="right"> 301 </td><td> 
+    </td><td align="right"> 7183437 </td><td> </td><td align="right"> 304 </td><td> 
+    </td><td> 04 </td><td align="center"> Nov </td><td> 1990 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 316 </td><td> 
+    </td><td align="right"> 7 </td><td> </td><td align="right"> 320 </td><td> 
+    </td><td> </td><td> </td><td> 1956 </td><td> </td><td> R. M. Robinson 
+</td></tr><tr><td align="right"> 329 </td><td> 
+    </td><td align="right"> 1211 </td><td> </td><td align="right"> 333 </td><td> 
+    </td><td> 12 </td><td align="center"> Jan </td><td> 1981 </td><td> </td><td> H. Suyama 
+</td></tr><tr><td align="right"> 334 </td><td> 
+    </td><td align="right"> 27609 </td><td> </td><td align="right"> 341 </td><td> 
+    </td><td> 25 </td><td align="center"> Jan </td><td> 1984 </td><td> </td><td> W. Keller 
+</td></tr><tr><td align="right"> 338 </td><td> 
+    </td><td align="right"> 27654487 </td><td> </td><td align="right"> 342 </td><td> 
+    </td><td> 22 </td><td align="center"> Dec </td><td> 1990 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 343 </td><td> 
+    </td><td align="right"> 4844391185 </td><td> </td><td align="right"> 345 </td><td> 
+    </td><td> 29 </td><td align="center"> Aug </td><td> 2001 </td><td> </td><td> V. A. Danilov &amp; Durman 
+</td></tr><tr><td align="right"> 353 </td><td> 
+    </td><td align="right"> 18908555 </td><td> </td><td align="right"> 355 </td><td> 
+    </td><td> 25 </td><td align="center"> Dec </td><td> 1990 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 370 </td><td> 
+    </td><td align="right"> 573230511 </td><td> </td><td align="right"> 373 </td><td> 
+    </td><td> 22 </td><td align="center"> Aug </td><td> 2000 </td><td> </td><td> L. N. Durman 
+</td></tr><tr><td align="right"> 375 </td><td> 
+    </td><td align="right"> 733251 </td><td> </td><td align="right"> 377 </td><td> 
+    </td><td> 09 </td><td align="center"> Jun </td><td> 1986 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 376 </td><td> 
+    </td><td align="right"> 810373 </td><td> </td><td align="right"> 378 </td><td> 
+    </td><td> 09 </td><td align="center"> Jun </td><td> 1986 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 380 </td><td> 
+    </td><td align="right"> 321116871 </td><td> </td><td align="right"> 385 </td><td> 
+    </td><td> 26 </td><td align="center"> Jun </td><td> 2000 </td><td> </td><td> L. N. Durman 
+</td></tr><tr><td align="right"> 398 </td><td> 
+    </td><td align="right"> 120845 </td><td> </td><td align="right"> 401 </td><td> 
+    </td><td> 18 </td><td align="center"> Apr </td><td> 1984 </td><td> </td><td> W. Keller 
+</td></tr><tr><td align="right"> 416 </td><td> 
+    </td><td align="right"> 8619 </td><td> </td><td align="right"> 418 </td><td> 
+    </td><td> </td><td> </td><td> 1981 </td><td> </td><td> H. Suyama 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 38039 </td><td> </td><td align="right"> 419 </td><td> 
+    </td><td> 16 </td><td align="center"> Feb </td><td> 1984 </td><td> </td><td> W. Keller 
+</td></tr><tr><td align="right"> 417 </td><td> 
+    </td><td align="right"> 118086729 </td><td> </td><td align="right"> 421 </td><td> 
+    </td><td> 13 </td><td align="center"> Jun </td><td> 1992 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 303472680883 </td><td> </td><td align="right"> 420 </td><td> 
+    </td><td> 30 </td><td align="center"> Jan </td><td> 2013 </td><td> </td><td> R. Maznichenko &amp; Rodenkirch 
+</td></tr><tr><td align="right"> 425 </td><td> 
+    </td><td align="right"> 44893411020831 </td><td> </td><td align="right"> 427 </td><td> 
+    </td><td> 25 </td><td align="center"> Jun </td><td> 2023 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 431 </td><td> 
+    </td><td align="right"> 5769285 </td><td> </td><td align="right"> 434 </td><td> 
+    </td><td> 30 </td><td align="center"> Nov </td><td> 1990 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 452 </td><td> 
+    </td><td align="right"> 27 </td><td> </td><td align="right"> 455 </td><td> 
+    </td><td> </td><td> </td><td> 1956 </td><td> </td><td> R. M. Robinson 
+</td></tr><tr><td align="right"> 459 </td><td> 
+    </td><td align="right"> 5449229488169 </td><td> </td><td align="right"> 465 </td><td> 
+    </td><td> 08 </td><td align="center"> May </td><td> 2013 </td><td> </td><td> R. Propper &amp; Rodenkirch 
+</td></tr><tr><td align="right"> 468 </td><td> 
+    </td><td align="right"> 27114089 </td><td> </td><td align="right"> 471 </td><td> 
+    </td><td> 25 </td><td align="center"> Sep </td><td> 1992 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 480 </td><td> 
+    </td><td align="right"> 5673968845 </td><td> </td><td align="right"> 484 </td><td> 
+    </td><td> 24 </td><td align="center"> Nov </td><td> 2001 </td><td> </td><td> V. A. Danilov &amp; Durman 
+</td></tr><tr><td align="right"> 517 </td><td> 
+    </td><td align="right"> 84977118993 </td><td> </td><td align="right"> 520 </td><td> 
+    </td><td> 25 </td><td align="center"> Jan </td><td> 2010 </td><td> </td><td> V. S. Maiorov &amp; Durman 
+</td></tr><tr><td align="right"> 544 </td><td> 
+    </td><td align="right"> 225 </td><td> </td><td align="right"> 547 </td><td> 
+    </td><td> </td><td> </td><td> 1979 </td><td> </td><td> R. Baillie 
+</td></tr><tr><td align="right"> 547 </td><td> 
+    </td><td align="right"> 77377 </td><td> </td><td align="right"> 550 </td><td> 
+    </td><td> 05 </td><td align="center"> Jun </td><td> 1986 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 556 </td><td> 
+    </td><td align="right"> 127 </td><td> </td><td align="right"> 558 </td><td> 
+    </td><td> </td><td> </td><td> 1976 </td><td> </td><td> G. Matthew &amp; H. C. Williams 
+</td></tr><tr><td align="right"> 569 </td><td> 
+    </td><td align="right"> 6616590375 </td><td> </td><td align="right"> 575 </td><td> 
+    </td><td> 25 </td><td align="center"> Feb </td><td> 2003 </td><td> </td><td> S. Kuzmin &amp; Durman 
+</td></tr><tr><td align="right"> 579 </td><td> 
+    </td><td align="right"> 63856313 </td><td> </td><td align="right"> 581 </td><td> 
+    </td><td> 04 </td><td align="center"> Oct </td><td> 1999 </td><td> </td><td> T. Taura 
+</td></tr><tr><td align="right"> 600 </td><td> 
+    </td><td align="right"> 6213186413 </td><td> </td><td align="right"> 605 </td><td> 
+    </td><td> 29 </td><td align="center"> Sep </td><td> 2005 </td><td> </td><td> A. Vuori &amp; Durman 
+</td></tr><tr><td align="right"> 620 </td><td> 
+    </td><td align="right"> 10084141 </td><td> </td><td align="right"> 624 </td><td> 
+    </td><td> 19 </td><td align="center"> Jan </td><td> 1992 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td>  </td><td> 
+    </td><td align="right"> 27024923163 </td><td> </td><td align="right"> 625 </td><td> 
+    </td><td> 21 </td><td align="center"> Oct </td><td> 2015 </td><td> </td><td> A. Vuori &amp; Durman 
+</td></tr><tr><td align="right"> 635 </td><td> 
+    </td><td align="right"> 4258979 </td><td> </td><td align="right"> 645 </td><td> 
+    </td><td> 12 </td><td align="center"> Jul </td><td> 1991 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 637 </td><td> 
+    </td><td align="right"> 11969 </td><td> </td><td align="right"> 643 </td><td> 
+    </td><td> 08 </td><td align="center"> Mar </td><td> 1984 </td><td> </td><td> W. Keller 
+</td></tr><tr><td align="right"> 642 </td><td> 
+    </td><td align="right"> 52943971 </td><td> </td><td align="right"> 644 </td><td> 
+    </td><td> 08 </td><td align="center"> Aug </td><td> 1999 </td><td> </td><td> T. Taura 
+</td></tr><tr><td align="right"> 666 </td><td> 
+    </td><td align="right"> 217924552867 </td><td> </td><td align="right"> 668 </td><td> 
+    </td><td> 26 </td><td align="center"> May </td><td> 2014 </td><td> </td><td> R. Maznichenko 
+</td></tr><tr><td align="right"> 667 </td><td> 
+    </td><td align="right"> 491628159 </td><td> </td><td align="right"> 669 </td><td> 
+    </td><td> 12 </td><td align="center"> Mar </td><td> 2001 </td><td> </td><td> T. Taura 
+</td></tr><tr><td align="right"> 692 </td><td> 
+    </td><td align="right"> 717 </td><td> </td><td align="right"> 695 </td><td> 
+    </td><td> </td><td> </td><td> 1979 </td><td> </td><td> A. O. L. Atkin &amp; N. W. Rickert 
+</td></tr><tr><td align="right"> 723 </td><td> 
+    </td><td align="right"> 554815 </td><td> </td><td align="right"> 730 </td><td> 
+    </td><td> 04 </td><td align="center"> Jan </td><td> 1991 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 744 </td><td> 
+    </td><td align="right"> 17 </td><td> </td><td align="right"> 747 </td><td> 
+    </td><td> </td><td> </td><td> 1976 </td><td> </td><td> G. Matthew &amp; H. C. Williams 
+</td></tr><tr><td align="right"> 851 </td><td> 
+    </td><td align="right"> 497531 </td><td> </td><td align="right"> 859 </td><td> 
+    </td><td> 18 </td><td align="center"> Jan </td><td> 1988 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 885 </td><td> 
+    </td><td align="right"> 16578999 </td><td> </td><td align="right"> 887 </td><td> 
+    </td><td> 12 </td><td align="center"> Jul </td><td> 1992 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 906 </td><td> 
+    </td><td align="right"> 57063 </td><td> </td><td align="right"> 908 </td><td> 
+    </td><td> 19 </td><td align="center"> May </td><td> 1986 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 931 </td><td> 
+    </td><td align="right"> 1985 </td><td> </td><td align="right"> 933 </td><td> 
+    </td><td> 22 </td><td align="center"> Dec </td><td> 1980 </td><td> </td><td> W. Keller 
+</td></tr><tr><td align="right"> 943 </td><td> 
+    </td><td align="right"> 4785972759 </td><td> </td><td align="right"> 954 </td><td> 
+    </td><td> 28 </td><td align="center"> Mar </td><td> 2012 </td><td> </td><td> A. Sen &amp; Rodenkirch 
+</td></tr><tr><td align="right"> 971 </td><td> 
+    </td><td align="right"> 541664191 </td><td> </td><td align="right"> 976 </td><td> 
+    </td><td> 04 </td><td align="center"> Apr </td><td> 2002 </td><td> </td><td> D. Komin &amp; Durman 
+</td></tr><tr><td align="right"> 1069 </td><td> 
+    </td><td align="right"> 137883 </td><td> </td><td align="right"> 1073 </td><td> 
+    </td><td> 01 </td><td align="center"> Sep </td><td> 1992 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 1082 </td><td> 
+    </td><td align="right"> 82165 </td><td> </td><td align="right"> 1084 </td><td> 
+    </td><td> 08 </td><td align="center"> Apr </td><td> 1991 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 1114 </td><td> 
+    </td><td align="right"> 11618577 </td><td> </td><td align="right"> 1116 </td><td> 
+    </td><td> 22 </td><td align="center"> Jan </td><td> 2001 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 1123 </td><td> 
+    </td><td align="right"> 25835 </td><td> </td><td align="right"> 1125 </td><td> 
+    </td><td> 15 </td><td align="center"> Jan </td><td> 1987 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 1132 </td><td> 
+    </td><td align="right"> 10111717305 </td><td> </td><td align="right"> 1136 </td><td> 
+    </td><td> 26 </td><td align="center"> Dec </td><td> 2012 </td><td> </td><td> S. Batalov &amp; Rodenkirch  
+</td></tr><tr><td align="right"> 1160 </td><td> 
+    </td><td align="right"> 2018719057 </td><td> </td><td align="right"> 1162 </td><td> 
+    </td><td> 15 </td><td align="center"> May </td><td> 2005 </td><td> </td><td> M. Pacher &amp; Durman 
+</td></tr><tr><td align="right"> 1201 </td><td> 
+    </td><td align="right"> 837747239 </td><td> </td><td align="right"> 1203 </td><td> 
+    </td><td> 12 </td><td align="center"> Jan </td><td> 2011 </td><td> 
+    </td><td> M. Pacher, Jobling, Woltman &amp; Fougeron 
+</td></tr><tr><td align="right"> 1225 </td><td> 
+    </td><td align="right"> 79707 </td><td> </td><td align="right"> 1231 </td><td> 
+    </td><td> 08 </td><td align="center"> Jun </td><td> 1991 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 1229 </td><td> 
+    </td><td align="right"> 29139 </td><td> </td><td align="right"> 1233 </td><td> 
+    </td><td> 07 </td><td align="center"> Dec </td><td> 1987 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 1296 </td><td> 
+    </td><td align="right"> 58951871175 </td><td> </td><td align="right"> 1299 </td><td> 
+    </td><td> 30 </td><td align="center"> Oct </td><td> 2016 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 1379 </td><td> 
+    </td><td align="right"> 205071338665 </td><td> </td><td align="right"> 1382 </td><td> 
+    </td><td> 24 </td><td align="center"> Nov </td><td> 2021 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 1394 </td><td> 
+    </td><td align="right"> 62705223 </td><td> </td><td align="right"> 1396 </td><td> 
+    </td><td> 06 </td><td align="center"> Dec </td><td> 2001 </td><td> </td><td> T. Taura 
+</td></tr><tr><td align="right"> 1436 </td><td> 
+    </td><td align="right"> 713828860473 </td><td> </td><td align="right"> 1438 </td><td> 
+    </td><td> 21 </td><td align="center"> Apr </td><td> 2023 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 1451 </td><td> 
+    </td><td align="right"> 13143 </td><td> </td><td align="right"> 1454 </td><td> 
+    </td><td> 30 </td><td align="center"> Oct </td><td> 1986 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 1493 </td><td> 
+    </td><td align="right"> 623619365837 </td><td> </td><td align="right"> 1495 </td><td> 
+    </td><td> 09 </td><td align="center"> Feb </td><td> 2023 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 1551 </td><td> 
+    </td><td align="right"> 291 </td><td> </td><td align="right"> 1553 </td><td> 
+    </td><td> </td><td> </td><td> 1979 </td><td> </td><td> A. O. L. Atkin &amp; N. W. Rickert 
+</td></tr><tr><td align="right"> 1598 </td><td> 
+    </td><td align="right"> 10923781 </td><td> </td><td align="right"> 1600 </td><td> 
+    </td><td> 21 </td><td align="center"> Dec </td><td> 2000 </td><td> </td><td> T. Taura 
+</td></tr><tr><td align="right"> 1680 </td><td> 
+    </td><td align="right"> 26778342591 </td><td> </td><td align="right"> 1683 </td><td> 
+    </td><td> 05 </td><td align="center"> Dec </td><td> 2016 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 1710 </td><td> 
+    </td><td align="right"> 351276975 </td><td> </td><td align="right"> 1719 </td><td> 
+    </td><td> 09 </td><td align="center"> Mar </td><td> 2008 </td><td> 
+    </td><td> M. Pacher, Jobling, Woltman &amp; Fougeron 
+</td></tr><tr><td align="right"> 1722 </td><td> 
+    </td><td align="right"> 364182745 </td><td> </td><td align="right"> 1724 </td><td> 
+    </td><td> 19 </td><td align="center"> Apr </td><td> 2008 </td><td> 
+    </td><td> M. Pacher, Jobling, Woltman &amp; Fougeron 
+</td></tr><tr><td align="right"> 1784 </td><td> 
+    </td><td align="right"> 321941255325 </td><td> </td><td align="right"> 1788 </td><td> 
+    </td><td> 31 </td><td align="center"> May </td><td> 2023 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 1849 </td><td> 
+    </td><td align="right"> 98855 </td><td> </td><td align="right"> 1851 </td><td> 
+    </td><td> 01 </td><td align="center"> Sep </td><td> 1992 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 1945 </td><td> 
+    </td><td align="right"> 5 </td><td> </td><td align="right"> 1947 </td><td> 
+    </td><td> </td><td> </td><td> 1957 </td><td> </td><td> R. M. Robinson 
+</td></tr><tr><td align="right"> 1990 </td><td> 
+    </td><td align="right"> 150863 </td><td> </td><td align="right"> 1993 </td><td> 
+    </td><td> 30 </td><td align="center"> Oct </td><td> 1995 </td><td> </td><td> T. Taura 
+</td></tr><tr><td align="right"> 2023 </td><td> 
+    </td><td align="right"> 29 </td><td> </td><td align="right"> 2027 </td><td> 
+    </td><td> </td><td> </td><td> 1979 </td><td> </td><td> A. O. L. Atkin &amp; N. W. Rickert;
+</td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td>
+         </td><td> G. V. Cormack &amp; H. C. Williams
+</td></tr><tr><td align="right"> 2059 </td><td> 
+    </td><td align="right"> 591909 </td><td> </td><td align="right"> 2063 </td><td> 
+    </td><td> 09 </td><td align="center"> May </td><td> 2000 </td><td> </td><td> R. Ballinger &amp; Gallot 
+</td></tr><tr><td align="right"> 2089 </td><td> 
+    </td><td align="right"> 431 </td><td> </td><td align="right"> 2099 </td><td> 
+    </td><td> 17 </td><td align="center"> Aug </td><td> 1983 </td><td> </td><td> H. Suyama 
+</td></tr><tr><td align="right"> 2123 </td><td> 
+    </td><td align="right"> 9659599821 </td><td> </td><td align="right"> 2125 </td><td> 
+    </td><td> 16 </td><td align="center"> Dec </td><td> 2016 </td><td> </td><td> G. B. Gostin
+</td></tr><tr><td align="right"> 2144 </td><td> 
+    </td><td align="right"> 19789270693 </td><td> </td><td align="right"> 2148 </td><td> 
+    </td><td> 02 </td><td align="center"> Nov </td><td> 2018 </td><td> </td><td> G. B. Gostin
+</td></tr><tr><td align="right"> 2286 </td><td> 
+    </td><td align="right"> 4004779405 </td><td> </td><td align="right"> 2288 </td><td> 
+    </td><td> 25 </td><td align="center"> Nov </td><td> 2015 </td><td> </td><td> G. B. Gostin
+</td></tr><tr><td align="right"> 2420 </td><td> 
+    </td><td align="right"> 103257279 </td><td> </td><td align="right"> 2422 </td><td> 
+    </td><td> 07 </td><td align="center"> Nov </td><td> 2010 </td><td> </td><td> P. Strasser  
+</td></tr><tr><td align="right"> 2456 </td><td> 
+    </td><td align="right"> 85 </td><td> </td><td align="right"> 2458 </td><td> 
+    </td><td> </td><td> </td><td> 1979 </td><td> </td><td> A. O. L. Atkin &amp; N. W. Rickert 
+</td></tr><tr><td align="right"> 2587 </td><td> 
+    </td><td align="right"> 15249465809 </td><td> </td><td align="right"> 2591 </td><td> 
+    </td><td> 09 </td><td align="center"> Dec </td><td> 2019 </td><td> </td><td> G. B. Gostin
+</td></tr><tr><td align="right"> 2606 </td><td> 
+    </td><td align="right"> 238451805 </td><td> </td><td align="right"> 2608 </td><td> 
+    </td><td> 11 </td><td align="center"> Mar </td><td> 2012 </td><td> 
+    </td><td> T. Nohara, Jobling, Woltman &amp; Fougeron 
+</td></tr><tr><td align="right"> 3056 </td><td> 
+    </td><td align="right"> 3370842847 </td><td> </td><td align="right"> 3058 </td><td> 
+    </td><td> 28 </td><td align="center"> Jan </td><td> 2017 </td><td> </td><td> G. B. Gostin
+</td></tr><tr><td align="right"> 3310 </td><td> 
+    </td><td align="right"> 5 </td><td> </td><td align="right"> 3313 </td><td> 
+    </td><td> </td><td> </td><td> 1979 </td><td> </td><td> A. O. L. Atkin &amp; N. W. Rickert;
+</td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td>
+         </td><td> G. V. Cormack &amp; H. C. Williams
+</td></tr><tr><td align="right"> 3314 </td><td> 
+    </td><td align="right"> 406860969 </td><td> </td><td align="right"> 3322 </td><td> 
+    </td><td> 18 </td><td align="center"> Jan </td><td> 2013 </td><td> 
+    </td><td> M. Pacher, Jobling, Woltman &amp; Fougeron 
+</td></tr><tr><td align="right"> 3335 </td><td> 
+    </td><td align="right"> 43714055 </td><td> </td><td align="right"> 3337 </td><td> 
+    </td><td> 05 </td><td align="center"> Jul </td><td> 2011 </td><td> 
+    </td><td> M. Kamenyuk, Fougeron &amp; Penné 
+</td></tr><tr><td align="right"> 3345 </td><td> 
+    </td><td align="right"> 6604326057 </td><td> </td><td align="right"> 3347 </td><td> 
+    </td><td> 13 </td><td align="center"> Dec </td><td> 2018 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 3506 </td><td> 
+    </td><td align="right"> 501 </td><td> </td><td align="right"> 3508 </td><td> 
+    </td><td> 26 </td><td align="center"> Jul </td><td> 1986 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 3576 </td><td> 
+    </td><td align="right"> 1132007355 </td><td> </td><td align="right"> 3578 </td><td> 
+    </td><td> 21 </td><td align="center"> Jul </td><td> 2015 </td><td> </td><td> T. Nohara &amp; Fougeron
+</td></tr><tr><td align="right"> 3703 </td><td> 
+    </td><td align="right"> 262254673 </td><td> </td><td align="right"> 3706 </td><td> 
+    </td><td> 17 </td><td align="center"> Jun </td><td> 2012 </td><td> 
+    </td><td> T. Nohara, Jobling, Woltman &amp; Fougeron 
+</td></tr><tr><td align="right"> 3723 </td><td> 
+    </td><td align="right"> 13308899 </td><td> </td><td align="right"> 3725 </td><td> 
+    </td><td> 03 </td><td align="center"> Jul </td><td> 2002 </td><td> </td><td> J. Fougeron 
+</td></tr><tr><td align="right"> 3730 </td><td> 
+    </td><td align="right"> 1127899657 </td><td> </td><td align="right"> 3732 </td><td> 
+    </td><td> 17 </td><td align="center"> Aug </td><td> 2015 </td><td> </td><td> T. Nohara &amp; Fougeron 
+</td></tr><tr><td align="right"> 3850 </td><td> 
+    </td><td align="right"> 787703529 </td><td> </td><td align="right"> 3854 </td><td> 
+    </td><td> 13 </td><td align="center"> Aug </td><td> 2015 </td><td> 
+    </td><td> M. Pacher, Jobling, Woltman &amp; Fougeron 
+</td></tr><tr><td align="right"> 4184 </td><td> 
+    </td><td align="right"> 465917283 </td><td> </td><td align="right"> 4189 </td><td> 
+    </td><td> 27 </td><td align="center"> Dec </td><td> 2014 </td><td> </td><td> S. Batalov &amp; Fougeron 
+</td></tr><tr><td align="right"> 4250 </td><td> 
+    </td><td align="right"> 173373 </td><td> </td><td align="right"> 4252 </td><td> 
+    </td><td> 22 </td><td align="center"> Dec </td><td> 1999 </td><td> </td><td> C. F. Kerchner 
+</td></tr><tr><td align="right"> 4258 </td><td> 
+    </td><td align="right"> 1435 </td><td> </td><td align="right"> 4262 </td><td> 
+    </td><td> 05 </td><td align="center"> Aug </td><td> 1993 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 4260 </td><td> 
+    </td><td align="right"> 209161375 </td><td> </td><td align="right"> 4262 </td><td> 
+    </td><td> 14 </td><td align="center"> Mar </td><td> 2014 </td><td> </td><td> T. Nohara, Jobling &amp; Fougeron 
+</td></tr><tr><td align="right"> 4265 </td><td> 
+    </td><td align="right"> 72179955 </td><td> </td><td align="right"> 4269 </td><td> 
+    </td><td> 03 </td><td align="center"> Aug </td><td> 2012 </td><td> 
+    </td><td> T. Nohara, Jobling, Woltman &amp; Fougeron 
+</td></tr><tr><td align="right"> 4332 </td><td> 
+    </td><td align="right"> 2466157 </td><td> </td><td align="right"> 4334 </td><td> 
+    </td><td> 15 </td><td align="center"> Oct </td><td> 2002 </td><td> </td><td> J. Fougeron 
+</td></tr><tr><td align="right"> 4652 </td><td> 
+    </td><td align="right"> 143918649 </td><td> </td><td align="right"> 4654 </td><td> 
+    </td><td> 09 </td><td align="center"> Oct </td><td> 2012 </td><td> </td><td> T. Rajala, Jobling &amp; Fougeron 
+</td></tr><tr><td align="right"> 4724 </td><td> 
+    </td><td align="right"> 29 </td><td> </td><td align="right"> 4727 </td><td> 
+    </td><td>  </td><td> </td><td> 1979 </td><td> </td><td> G. V. Cormack &amp; H. C. Williams 
+</td></tr><tr><td align="right"> 5199 </td><td> 
+    </td><td align="right"> 1488947679 </td><td> </td><td align="right"> 5201 </td><td> 
+    </td><td> 24 </td><td align="center"> Jul </td><td> 2018 </td><td> </td><td> M. Rodenkirch &amp; Fougeron 
+</td></tr><tr><td align="right"> 5320 </td><td> 
+    </td><td align="right"> 21341 </td><td> </td><td align="right"> 5323 </td><td> 
+    </td><td> 22 </td><td align="center"> Apr </td><td> 1998 </td><td> </td><td> T. Taura 
+</td></tr><tr><td align="right"> 5531 </td><td> 
+    </td><td align="right"> 1503975 </td><td> </td><td align="right"> 5533 </td><td> 
+    </td><td> 11 </td><td align="center"> Apr </td><td> 2002 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 5792 </td><td> 
+    </td><td align="right"> 8872947 </td><td> </td><td align="right"> 5794 </td><td> 
+    </td><td> 03 </td><td align="center"> Mar </td><td> 2003 </td><td> </td><td> J. Fougeron 
+</td></tr><tr><td align="right"> 5957 </td><td> 
+    </td><td align="right"> 421435 </td><td> </td><td align="right"> 5960 </td><td> 
+    </td><td> 16 </td><td align="center"> Jan </td><td> 2001 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 6208 </td><td> 
+    </td><td align="right"> 763 </td><td> </td><td align="right"> 6210 </td><td> 
+    </td><td> 05 </td><td align="center"> Aug </td><td> 1993 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 6355 </td><td> 
+    </td><td align="right"> 115185 </td><td> </td><td align="right"> 6358 </td><td> 
+    </td><td> 14 </td><td align="center"> Nov </td><td> 2000 </td><td> </td><td> C. F. Kerchner 
+</td></tr><tr><td align="right"> 6390 </td><td> 
+    </td><td align="right"> 303 </td><td> </td><td align="right"> 6393 </td><td> 
+    </td><td> 06 </td><td align="center"> Oct </td><td> 1993 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 6537 </td><td> 
+    </td><td align="right"> 17 </td><td> </td><td align="right"> 6539 </td><td> 
+    </td><td> </td><td> </td><td> 1979 </td><td> </td><td> G. V. Cormack &amp; H. C. Williams 
+</td></tr><tr><td align="right"> 6835 </td><td> 
+    </td><td align="right"> 19 </td><td> </td><td align="right"> 6838 </td><td> 
+    </td><td> 30 </td><td align="center"> Sep </td><td> 1978 </td><td> </td><td> W. Keller 
+</td></tr><tr><td align="right"> 6909 </td><td> 
+    </td><td align="right"> 6021 </td><td> </td><td align="right"> 6912 </td><td> 
+    </td><td> 12 </td><td align="center"> Nov </td><td> 1993 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 7137 </td><td> 
+    </td><td align="right"> 118807331 </td><td> </td><td align="right"> 7139 </td><td> 
+    </td><td> 21 </td><td align="center"> Feb </td><td> 2016 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 7181 </td><td> 
+    </td><td align="right"> 168329 </td><td> </td><td align="right"> 7187 </td><td> 
+    </td><td> 26 </td><td align="center"> Dec </td><td> 2000 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 7309 </td><td> 
+    </td><td align="right"> 145 </td><td> </td><td align="right"> 7312 </td><td> 
+    </td><td> 25 </td><td align="center"> Oct </td><td> 1992 </td><td> </td><td> H. Dubner 
+</td></tr><tr><td align="right"> 8239 </td><td> 
+    </td><td align="right"> 7473 </td><td> </td><td align="right"> 8242 </td><td> 
+    </td><td> 25 </td><td align="center"> Jun </td><td> 1998 </td><td> </td><td> R. Prethaler &amp; Gallot 
+</td></tr><tr><td align="right"> 8269 </td><td> 
+    </td><td align="right"> 592131 </td><td> </td><td align="right"> 8271 </td><td> 
+    </td><td> 21 </td><td align="center"> May </td><td> 2003 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 8298 </td><td> 
+    </td><td align="right"> 1054057 </td><td> </td><td align="right"> 8300 </td><td> 
+    </td><td> 01 </td><td align="center"> Nov </td><td> 2003 </td><td> </td><td> C. Kitchen &amp; Gallot 
+</td></tr><tr><td align="right"> 8555 </td><td> 
+    </td><td align="right"> 645 </td><td> </td><td align="right"> 8557 </td><td> 
+    </td><td> 01 </td><td align="center"> Nov </td><td> 1993 </td><td> </td><td> H. Dubner 
+</td></tr><tr><td align="right"> 9322 </td><td> 
+    </td><td align="right"> 8247 </td><td> </td><td align="right"> 9324 </td><td> 
+    </td><td> 16 </td><td align="center"> Nov </td><td> 1999 </td><td> </td><td> C. F. Kerchner 
+</td></tr><tr><td align="right"> 9428 </td><td> 
+    </td><td align="right"> 9 </td><td> </td><td align="right"> 9431 </td><td> 
+    </td><td> 01 </td><td align="center"> Apr </td><td> 1983 </td><td> </td><td> W. Keller 
+</td></tr><tr><td align="right"> 9447 </td><td> 
+    </td><td align="right"> 5505161 </td><td> </td><td align="right"> 9449 </td><td> 
+    </td><td> 09 </td><td align="center"> Nov </td><td> 2012 </td><td> </td><td> S. Batalov, Jobling &amp; Fougeron 
+</td></tr><tr><td align="right"> 9448 </td><td> 
+    </td><td align="right"> 19 </td><td> </td><td align="right"> 9450 </td><td> 
+    </td><td> 30 </td><td align="center"> Aug </td><td> 1980 </td><td> </td><td> W. Keller 
+</td></tr><tr><td align="right"> 9549 </td><td> 
+    </td><td align="right"> 1211 </td><td> </td><td align="right"> 9551 </td><td> 
+    </td><td> 15 </td><td align="center"> Feb </td><td> 1998 </td><td> </td><td> T. Taura 
+</td></tr><tr><td align="right"> 9552 </td><td> 
+    </td><td align="right"> 60567741 </td><td> </td><td align="right"> 9555 </td><td> 
+    </td><td> 04 </td><td align="center"> Apr </td><td> 2016 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 9691 </td><td> 
+    </td><td align="right"> 260435 </td><td> </td><td align="right"> 9693 </td><td> 
+    </td><td> 12 </td><td align="center"> Dec </td><td> 2001 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 9747 </td><td> 
+    </td><td align="right"> 44670651 </td><td> </td><td align="right"> 9749 </td><td> 
+    </td><td> 20 </td><td align="center"> Dec </td><td> 2014 </td><td> </td><td> T. Nohara &amp; Fougeron  
+</td></tr><tr><td align="right"> 9863 </td><td> 
+    </td><td align="right"> 332436749 </td><td> </td><td align="right"> 9865 </td><td> 
+    </td><td> 23 </td><td align="center"> Mar </td><td> 2019 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 11075 </td><td> 
+    </td><td align="right"> 171369935 </td><td> </td><td align="right"> 11077 </td><td> 
+    </td><td> 29 </td><td align="center"> Jun </td><td> 2020 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 11695 </td><td> 
+    </td><td align="right"> 203355 </td><td> </td><td align="right"> 11703 </td><td> 
+    </td><td> 31 </td><td align="center"> Dec </td><td> 2001 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 12185 </td><td> 
+    </td><td align="right"> 81 </td><td> </td><td align="right"> 12189 </td><td> 
+    </td><td> 04 </td><td align="center"> Sep </td><td> 1993 </td><td> </td><td> H. Dubner 
+</td></tr><tr><td align="right"> 12825 </td><td> 
+    </td><td align="right"> 1814649 </td><td> </td><td align="right"> 12827 </td><td> 
+    </td><td> 09 </td><td align="center"> Oct </td><td> 2009 </td><td> 
+    </td><td> T. Nohara, Fougeron &amp; Penné 
+</td></tr><tr><td align="right"> 13250 </td><td> 
+    </td><td align="right"> 351 </td><td> </td><td align="right"> 13252 </td><td> 
+    </td><td> 01 </td><td align="center"> Oct </td><td> 1996 </td><td> </td><td> T. Taura 
+</td></tr><tr><td align="right"> 13623 </td><td> 
+    </td><td align="right"> 48265 </td><td> </td><td align="right"> 13626 </td><td> 
+    </td><td> 14 </td><td align="center"> Dec </td><td> 2000 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 14252 </td><td> 
+    </td><td align="right"> 1173 </td><td> </td><td align="right"> 14254 </td><td> 
+    </td><td> 07 </td><td align="center"> Mar </td><td> 1997 </td><td> </td><td> T. Taura 
+</td></tr><tr><td align="right"> 14276 </td><td> 
+    </td><td align="right"> 157 </td><td> </td><td align="right"> 14280 </td><td> 
+    </td><td> 31 </td><td align="center"> Aug </td><td> 1996 </td><td> </td><td> T. Taura 
+</td></tr><tr><td align="right"> 14528 </td><td> 
+    </td><td align="right"> 17217 </td><td> </td><td align="right"> 14530 </td><td> 
+    </td><td> 24 </td><td align="center"> Dec </td><td> 2000 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 14587 </td><td> 
+    </td><td align="right"> 24142479 </td><td> </td><td align="right"> 14590 </td><td> 
+    </td><td> 25 </td><td align="center"> May </td><td> 2016 </td><td> </td><td> A. Nordin &amp; Fougeron  
+</td></tr><tr><td align="right"> 15161 </td><td> 
+    </td><td align="right"> 55 </td><td> </td><td align="right"> 15164 </td><td> 
+    </td><td> 28 </td><td align="center"> Aug </td><td> 1993 </td><td> </td><td> H. Dubner 
+</td></tr><tr><td align="right"> 17748 </td><td> 
+    </td><td align="right"> 3860269 </td><td> </td><td align="right"> 17750 </td><td> 
+    </td><td> 21 </td><td align="center"> Nov </td><td> 2012 </td><td> </td><td> S. Batalov, Jobling &amp; Fougeron 
+</td></tr><tr><td align="right"> 17906 </td><td> 
+    </td><td align="right"> 135 </td><td> </td><td align="right"> 17909 </td><td> 
+    </td><td> 31 </td><td align="center"> Aug </td><td> 1996 </td><td>
+    </td><td> T. Taura (Prime: J. Young 1993) 
+</td></tr><tr><td align="right"> 18345 </td><td> 
+    </td><td align="right"> 15071297 </td><td> </td><td align="right"> 18347 </td><td> 
+    </td><td> 07 </td><td align="center"> Sep </td><td> 2017 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 18749 </td><td> 
+    </td><td align="right"> 11 </td><td> </td><td align="right"> 18759 </td><td> 
+    </td><td> 12 </td><td align="center"> Sep </td><td> 1992 </td><td> </td><td> H. Dubner 
+</td></tr><tr><td align="right"> 18757 </td><td> 
+    </td><td align="right"> 33 </td><td> </td><td align="right"> 18766 </td><td> 
+    </td><td> 20 </td><td align="center"> Aug </td><td> 1993 </td><td> </td><td> H. Dubner 
+</td></tr><tr><td align="right"> 18933 </td><td> 
+    </td><td align="right"> 15175951 </td><td> </td><td align="right"> 18936 </td><td> 
+    </td><td> 13 </td><td align="center"> Sep </td><td> 2017 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 19211 </td><td> 
+    </td><td align="right"> 13323 </td><td> </td><td align="right"> 19220 </td><td> 
+    </td><td> 18 </td><td align="center"> May </td><td> 2001 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 22296 </td><td> 
+    </td><td align="right"> 4777 </td><td> </td><td align="right"> 22298 </td><td> 
+    </td><td> 07 </td><td align="center"> Mar </td><td> 2001 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 23069 </td><td> 
+    </td><td align="right"> 681 </td><td> </td><td align="right"> 23071 </td><td> 
+    </td><td>  </td><td align="center"> Jul </td><td> 1997 </td><td>
+    </td><td> T. Taura; Y. Gallot
+</td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td>
+    </td><td> (Prime: P. Demichel 1996) 
+</td></tr><tr><td align="right"> 23288 </td><td> 
+    </td><td align="right"> 19 </td><td> </td><td align="right"> 23290 </td><td> 
+    </td><td> 14 </td><td align="center"> Dec </td><td> 1992 </td><td> </td><td> H. Dubner 
+</td></tr><tr><td align="right"> 23471 </td><td> 
+    </td><td align="right"> 5 </td><td> </td><td align="right"> 23473 </td><td> 
+    </td><td> 05 </td><td align="center"> Sep </td><td> 1984 </td><td> </td><td> W. Keller 
+</td></tr><tr><td align="right"> 24651 </td><td> 
+    </td><td align="right"> 99 </td><td> </td><td align="right"> 24653 </td><td> 
+    </td><td> 11 </td><td align="center"> Sep </td><td> 1996 </td><td> </td><td> T. Taura 
+</td></tr><tr><td align="right"> 25006 </td><td> 
+    </td><td align="right"> 57 </td><td> </td><td align="right"> 25010 </td><td> 
+    </td><td> 18 </td><td align="center"> Dec </td><td> 1993 </td><td> </td><td> J. Young 
+</td></tr><tr><td align="right"> 25599 </td><td> 
+    </td><td align="right"> 14698299 </td><td> </td><td align="right"> 25602 </td><td> 
+    </td><td> 03 </td><td align="center"> Mar </td><td> 2021 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 28281 </td><td> 
+    </td><td align="right"> 81 </td><td> </td><td align="right"> 28285 </td><td> 
+    </td><td> 18 </td><td align="center"> Aug </td><td> 1996 </td><td> </td><td> T. Taura 
+</td></tr><tr><td align="right"> 30256 </td><td> 
+    </td><td align="right"> 121531 </td><td> </td><td align="right"> 30260 </td><td> 
+    </td><td> 16 </td><td align="center"> May </td><td> 2006 </td><td> 
+    </td><td> A. Vuori, Fougeron, Woltman &amp; Gallot 
+</td></tr><tr><td align="right"> 31880 </td><td> 
+    </td><td align="right"> 10981209 </td><td> </td><td align="right"> 31883 </td><td> 
+    </td><td> 10 </td><td align="center"> Jul </td><td> 2023 </td><td> </td><td> S. Batalov 
+</td></tr><tr><td align="right"> 35563 </td><td> 
+    </td><td align="right"> 357 </td><td> </td><td align="right"> 35567 </td><td> 
+    </td><td> 27 </td><td align="center"> Aug </td><td> 2000 </td><td> </td><td> N. S. Melo &amp; Gallot 
+</td></tr><tr><td align="right"> 37236 </td><td> 
+    </td><td align="right"> 1844383 </td><td> </td><td align="right"> 37238 </td><td> 
+    </td><td> 19 </td><td align="center"> Dec </td><td> 2017 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 38795 </td><td> 
+    </td><td align="right"> 1514535 </td><td> </td><td align="right"> 38797 </td><td> 
+    </td><td> 27 </td><td align="center"> Dec </td><td> 2017 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 38967 </td><td> 
+    </td><td align="right"> 177795 </td><td> </td><td align="right"> 38969 </td><td> 
+    </td><td> 10 </td><td align="center"> Jan </td><td> 2009 </td><td> 
+    </td><td> T. Nohara, Fougeron &amp; Penné 
+</td></tr><tr><td align="right"> 41894 </td><td> 
+    </td><td align="right"> 4935 </td><td> </td><td align="right"> 41897 </td><td> 
+    </td><td> 15 </td><td align="center"> Aug </td><td> 2001 </td><td> </td><td> J. Fougeron 
+</td></tr><tr><td align="right"> 43665 </td><td> 
+    </td><td align="right"> 2495 </td><td> </td><td align="right"> 43667 </td><td> 
+    </td><td> 21 </td><td align="center"> Aug </td><td> 2001 </td><td> </td><td> J. Fougeron 
+</td></tr><tr><td align="right"> 45278 </td><td> 
+    </td><td align="right"> 547653 </td><td> </td><td align="right"> 45280 </td><td> 
+    </td><td> 18 </td><td align="center"> Jan </td><td> 2018 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 48624 </td><td>
+    </td><td align="right"> 28949 </td><td> </td><td align="right"> 48627 </td><td> 
+    </td><td> 03 </td><td align="center"> May </td><td> 2008 </td><td> 
+    </td><td> T. Nohara, Fougeron &amp; Penné 
+</td></tr><tr><td align="right"> 49093 </td><td> 
+    </td><td align="right"> 165 </td><td> </td><td align="right"> 49095 </td><td> 
+    </td><td> 19 </td><td align="center"> Aug </td><td> 1998 </td><td> </td><td> Y. Gallot 
+</td></tr><tr><td align="right"> 49488 </td><td> 
+    </td><td align="right"> 71007 </td><td> </td><td align="right"> 49490 </td><td> 
+    </td><td> 18 </td><td align="center"> Apr </td><td> 2009 </td><td> 
+    </td><td> T. Nohara, Fougeron &amp; Penné 
+</td></tr><tr><td align="right"> 50078 </td><td>
+    </td><td align="right"> 7619 </td><td> </td><td align="right"> 50081 </td><td> 
+    </td><td> 06 </td><td align="center"> Mar </td><td> 2002 </td><td> 
+    </td><td> G. Axelsson, Jobling, Woltman &amp; Gallot 
+</td></tr><tr><td align="right"> 60079 </td><td> 
+    </td><td align="right"> 5731 </td><td> </td><td align="right"> 60084 </td><td> 
+    </td><td> 14 </td><td align="center"> Feb </td><td> 2005 </td><td>
+    </td><td> M. R. Eaton, Jobling, Woltman &amp; Gallot 
+</td></tr><tr><td align="right"> 63480 </td><td> 
+    </td><td align="right"> 242445 </td><td> </td><td align="right"> 63484 </td><td> 
+    </td><td> 10 </td><td align="center"> Mar </td><td> 2018 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 63679 </td><td> 
+    </td><td align="right"> 169 </td><td> </td><td align="right"> 63686 </td><td> 
+    </td><td> 19 </td><td align="center"> May </td><td> 1998 </td><td> </td><td> H. Dubner &amp; Gallot 
+</td></tr><tr><td align="right"> 66643 </td><td> 
+    </td><td align="right"> 749893 </td><td> </td><td align="right"> 66648 </td><td> 
+    </td><td> 11 </td><td align="center"> Aug </td><td> 2021 </td><td> </td><td> E. Doescher, Penné &amp; Fougeron
+</td></tr><tr><td align="right"> 79221 </td><td> 
+    </td><td align="right"> 6089 </td><td> </td><td align="right"> 79223 </td><td> 
+    </td><td> 01 </td><td align="center"> Aug </td><td> 2008 </td><td> 
+    </td><td> P. Samidoost, Fougeron &amp; Penné 
+</td></tr><tr><td align="right"> 83861 </td><td> 
+    </td><td align="right"> 99 </td><td> </td><td align="right"> 83863 </td><td> 
+    </td><td> 12 </td><td align="center"> Oct </td><td> 1998 </td><td> </td><td> G. N. Gusev &amp; Gallot 
+</td></tr><tr><td align="right"> 90057 </td><td>
+    </td><td align="right"> 189 </td><td> </td><td align="right"> 90061 </td><td> 
+    </td><td> 20 </td><td align="center"> Sep </td><td> 1999 </td><td> </td><td> D. Morenus &amp; Gallot 
+</td></tr><tr><td align="right"> 91213 </td><td>
+    </td><td align="right"> 585 </td><td> </td><td align="right"> 91215 </td><td> 
+    </td><td> 30 </td><td align="center"> Jul </td><td> 2001 </td><td> 
+    </td><td> G. Axelsson, Jobling, Woltman &amp; Gallot 
+</td></tr><tr><td align="right"> 94798 </td><td> 
+    </td><td align="right"> 21 </td><td> </td><td align="right"> 94801 </td><td> 
+    </td><td>  </td><td> Mar </td><td> 1995 </td><td> </td><td> J. Young 
+</td></tr><tr><td align="right"> 95328 </td><td> 
+    </td><td align="right"> 7 </td><td> </td><td align="right"> 95330 </td><td> 
+    </td><td> 23 </td><td align="center"> Aug </td><td> 1994 </td><td> </td><td> J. Young 
+</td></tr><tr><td align="right"> 100518 </td><td> 
+    </td><td align="right"> 79425 </td><td> </td><td align="right"> 100520 </td><td> 
+    </td><td> 22 </td><td align="center"> Oct </td><td> 2014 </td><td> 
+    </td><td> P. Samidoost, Fougeron &amp; Penné 
+</td></tr><tr><td align="right"> 104448 </td><td> 
+    </td><td align="right"> 927 </td><td> </td><td align="right"> 104451 </td><td> 
+    </td><td> 30 </td><td align="center"> Nov </td><td> 2001 </td><td> </td><td> A. P. Oleynick &amp; Gallot  
+</td></tr><tr><td align="right"> 106432 </td><td> 
+    </td><td align="right"> 30967 </td><td> </td><td align="right"> 106436 </td><td> 
+    </td><td> 13 </td><td align="center"> Nov </td><td> 2012 </td><td> </td><td> S. Batalov, Jobling &amp; Fougeron 
+</td></tr><tr><td align="right"> 113547 </td><td> 
+    </td><td align="right"> 39 </td><td> </td><td align="right"> 113549 </td><td> 
+    </td><td> 11 </td><td align="center"> May </td><td> 1999 </td><td> </td><td> J. Renze &amp; Gallot 
+</td></tr><tr><td align="right"> 114293 </td><td> 
+    </td><td align="right"> 13 </td><td> </td><td align="right"> 114296 </td><td> 
+    </td><td>  </td><td> Aug </td><td> 1995 </td><td> </td><td> J. Young 
+</td></tr><tr><td align="right"> 125410 </td><td> 
+    </td><td align="right"> 5 </td><td> </td><td align="right"> 125413 </td><td> 
+    </td><td>  </td><td> Aug </td><td> 1995 </td><td> </td><td> J. Young 
+</td></tr><tr><td align="right"> 134995 </td><td> 
+    </td><td align="right"> 47893 </td><td> </td><td align="right"> 134998 </td><td> 
+    </td><td> 22 </td><td align="center"> May </td><td> 2020 </td><td> </td><td> G. B. Gostin 
+</td></tr><tr><td align="right"> 138557 </td><td> 
+    </td><td align="right"> 7333 </td><td> </td><td align="right"> 138560 </td><td> 
+    </td><td> 12 </td><td align="center"> Mar </td><td> 2011 </td><td> 
+    </td><td> D. D'huyvetters, Reynolds, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 142460 </td><td> 
+    </td><td align="right"> 159 </td><td> </td><td align="right"> 142462 </td><td> 
+    </td><td> 14 </td><td align="center"> Nov </td><td> 2001 </td><td> </td><td> N. S. Melo &amp; Gallot 
+</td></tr><tr><td align="right"> 146221 </td><td> 
+    </td><td align="right"> 57 </td><td> </td><td align="right"> 146223 </td><td> 
+    </td><td> 11 </td><td align="center"> Feb </td><td> 2000 </td><td> </td><td> R. Lewis &amp; Gallot 
+</td></tr><tr><td align="right"> 157167 </td><td> 
+    </td><td align="right"> 3 </td><td> </td><td align="right"> 157169 </td><td> 
+    </td><td> 14 </td><td align="center"> Jun </td><td> 1995 </td><td> </td><td> J. Young 
+</td></tr><tr><td align="right"> 213319 </td><td> 
+    </td><td align="right"> 3 </td><td> </td><td align="right"> 213321 </td><td> 
+    </td><td> 21 </td><td align="center"> Aug </td><td> 1996 </td><td> </td><td> J. Young 
+</td></tr><tr><td align="right"> 221670 </td><td> 
+    </td><td align="right"> 3771 </td><td> </td><td align="right"> 221676 </td><td> 
+    </td><td> 01 </td><td align="center"> Jul </td><td> 2011 </td><td> 
+    </td><td> M. Doom, Reynolds, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 223380 </td><td> 
+    </td><td align="right"> 56073 </td><td> </td><td align="right"> 223382 </td><td> 
+    </td><td> 04 </td><td align="center"> Jul </td><td> 2024 </td><td> 
+    </td><td> R. Propper &amp; S. Batalov, Fougeron
+</td></tr><tr><td align="right"> 226614 </td><td> 
+    </td><td align="right"> 4479 </td><td> </td><td align="right"> 226618 </td><td> 
+    </td><td> 08 </td><td align="center"> Jul </td><td> 2011 </td><td> 
+    </td><td> P. Doggart, Reynolds, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 270091 </td><td> 
+    </td><td align="right"> 63 </td><td> </td><td align="right"> 270094 </td><td> 
+    </td><td> 05 </td><td align="center"> Feb </td><td> 2002 </td><td> </td><td> T. Taura &amp; Gallot 
+</td></tr><tr><td align="right"> 282717 </td><td> 
+    </td><td align="right"> 51 </td><td> </td><td align="right"> 282719 </td><td> 
+    </td><td> 13 </td><td align="center"> Nov </td><td> 2002 </td><td> </td><td> K. Odermatt &amp; Gallot 
+</td></tr><tr><td align="right"> 287384 </td><td> 
+    </td><td align="right"> 211 </td><td> </td><td align="right"> 287388 </td><td> 
+    </td><td> 13 </td><td align="center"> Dec </td><td> 2004 </td><td> </td><td> J. Fougeron 
+</td></tr><tr><td align="right"> 303088 </td><td> 
+    </td><td align="right"> 3 </td><td> </td><td align="right"> 303093 </td><td> 
+    </td><td> 13 </td><td align="center"> Jan </td><td> 1998 </td><td> </td><td> J. Young 
+</td></tr><tr><td align="right"> 338295 </td><td> 
+    </td><td align="right"> 485 </td><td> </td><td align="right"> 338297 </td><td> 
+    </td><td> 21 </td><td align="center"> Aug </td><td> 2007 </td><td>
+    </td><td> W. Keller, S. Murata, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 352279 </td><td> 
+    </td><td align="right"> 7905 </td><td> </td><td align="right"> 352281 </td><td> 
+    </td><td> 31 </td><td align="center"> May </td><td> 2012 </td><td> 
+    </td><td> J. Boerner, Reynolds, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 382447 </td><td> 
+    </td><td align="right"> 3 </td><td> </td><td align="right"> 382449 </td><td> 
+    </td><td> 25 </td><td align="center"> Jul </td><td> 1999 </td><td>
+    </td><td> J. B. Cosgrave &amp; Gallot 
+</td></tr><tr><td align="right"> 410105 </td><td> 
+    </td><td align="right"> 1207 </td><td> </td><td align="right"> 410108 </td><td> 
+    </td><td> 22 </td><td align="center"> Nov </td><td> 2005 </td><td> 
+    </td><td> J. Tajima, Jobling, Woltman &amp; Gallot 
+</td></tr><tr><td align="right"> 461076 </td><td> 
+    </td><td align="right"> 9 </td><td> </td><td align="right"> 461081 </td><td> 
+    </td><td> 04 </td><td align="center"> Aug </td><td> 2003 </td><td> 
+    </td><td> T. Nohara, Jobling, Woltman &amp; Gallot 
+</td></tr><tr><td align="right"> 472097 </td><td> 
+    </td><td align="right"> 89 </td><td> </td><td align="right"> 472099 </td><td> 
+    </td><td> 05 </td><td align="center"> Oct </td><td> 2004 </td><td>
+    </td><td> P. Samidoost, Fougeron &amp; Woltman
+</td></tr><tr><td align="right"> 476624 </td><td> 
+    </td><td align="right"> 651 </td><td> </td><td align="right"> 476632 </td><td> 
+    </td><td> 28 </td><td align="center"> Dec </td><td> 2008 </td><td>
+    </td><td> E. Ueda, Reynolds, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 495728 </td><td> 
+    </td><td align="right"> 243 </td><td> </td><td align="right"> 495732 </td><td> 
+    </td><td> 29 </td><td align="center"> May </td><td> 2007 </td><td> 
+    </td><td> R. Keiser, Jobling, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 567233 </td><td> 
+    </td><td align="right"> 519 </td><td> </td><td align="right"> 567235 </td><td> 
+    </td><td> 06 </td><td align="center"> Mar </td><td> 2009 </td><td> 
+    </td><td> S. Yamashita, Reynolds, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 585042 </td><td> 
+    </td><td align="right"> 151 </td><td> </td><td align="right"> 585044 </td><td> 
+    </td><td> 17 </td><td align="center"> Mar </td><td> 2007 </td><td>
+    </td><td> P. Saridis, Jobling, Penné &amp; Gallot 
+</td></tr><tr><td align="right"> 617813 </td><td> 
+    </td><td align="right"> 659 </td><td> </td><td align="right"> 617815 </td><td> 
+    </td><td> 31 </td><td align="center"> Mar </td><td> 2009 </td><td>
+    </td><td> E. Embling, Reynolds, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 672005 </td><td> 
+    </td><td align="right"> 27 </td><td> </td><td align="right"> 672007 </td><td> 
+    </td><td> 30 </td><td align="center"> Aug </td><td> 2005 </td><td> 
+    </td><td> C. Cooper, Jobling, Woltman &amp; Gallot 
+</td></tr><tr><td align="right"> 699760 </td><td> 
+    </td><td align="right"> 13243 </td><td> </td><td align="right"> 699764 </td><td> 
+    </td><td> 28 </td><td align="center"> Jul </td><td> 2023 </td><td> 
+    </td><td> R. Propper &amp; S. Batalov, Reynolds, Penné
+</td></tr><tr><td align="right"> 906108 </td><td> 
+    </td><td align="right"> 1705 </td><td> </td><td align="right"> 906110 </td><td> 
+    </td><td> 13 </td><td align="center"> Jun </td><td> 2012 </td><td> 
+    </td><td> R. Boniecki, Reynolds, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 960897 </td><td> 
+    </td><td align="right"> 11 </td><td> </td><td align="right"> 960901 </td><td> 
+    </td><td> 23 </td><td align="center"> Feb </td><td> 2005 </td><td> 
+    </td><td> M. R. Eaton, Jobling, Woltman &amp; Gallot 
+</td></tr><tr><td align="right"> 1099061 </td><td> 
+    </td><td align="right"> 2145 </td><td> </td><td align="right"> 1099064 </td><td> 
+    </td><td> 18 </td><td align="center"> Jun </td><td> 2013 </td><td> 
+    </td><td> S. Y. Tang, Reynolds, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 1246013 </td><td> 
+    </td><td align="right"> 329 </td><td> </td><td align="right"> 1246017 </td><td> 
+    </td><td> 06 </td><td align="center"> Jan </td><td> 2012 </td><td> 
+    </td><td> B. Dodson, Reynolds, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 1494096 </td><td> 
+    </td><td align="right"> 131 </td><td> </td><td align="right"> 1494099 </td><td> 
+    </td><td> 07 </td><td align="center"> Feb </td><td> 2012 </td><td> 
+    </td><td> R. Derrera, Reynolds, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 1747656 </td><td> 
+    </td><td align="right"> 183 </td><td> </td><td align="right"> 1747660 </td><td> 
+    </td><td> 10 </td><td align="center"> Mar </td><td> 2013 </td><td> 
+    </td><td> B. van Rooijen, Reynolds, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 2141872 </td><td> 
+    </td><td align="right"> 25 </td><td> </td><td align="right"> 2141884 </td><td> 
+    </td><td> 09 </td><td align="center"> Sep </td><td> 2011 </td><td> 
+    </td><td> G. Granowski, Reynolds, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 2145351 </td><td> 
+    </td><td align="right"> 3 </td><td> </td><td align="right"> 2145353 </td><td> 
+    </td><td> 21 </td><td align="center"> Feb </td><td> 2003 </td><td> 
+    </td><td> J. B. Cosgrave, Jobling, Woltman &amp; Gallot 
+</td></tr><tr><td align="right"> 2167797 </td><td> 
+    </td><td align="right"> 7 </td><td> </td><td align="right"> 2167800 </td><td> 
+    </td><td> 17 </td><td align="center"> Apr </td><td> 2007 </td><td>
+    </td><td> C. Cooper, Jobling, Woltman &amp; Gallot 
+</td></tr><tr><td align="right"> 2478782 </td><td> 
+    </td><td align="right"> 3 </td><td> </td><td align="right"> 2478785 </td><td> 
+    </td><td> 10 </td><td align="center"> Oct </td><td> 2003 </td><td> 
+    </td><td> J. B. Cosgrave, Jobling, Woltman &amp; Gallot 
+</td></tr><tr><td align="right"> 2543548 </td><td> 
+    </td><td align="right"> 9 </td><td> </td><td align="right"> 2543551 </td><td> 
+    </td><td> 22 </td><td align="center"> Jun </td><td> 2011 </td><td> 
+    </td><td> S. Brown, Reynolds, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 2662088 </td><td> 
+    </td><td align="right"> 267 </td><td> </td><td align="right"> 2662090 </td><td> 
+    </td><td> 13 </td><td align="center"> Feb </td><td> 2015 </td><td> 
+    </td><td> J. Parangalan, Reynolds, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 2747497 </td><td> 
+    </td><td align="right"> 57 </td><td> </td><td align="right"> 2747499 </td><td> 
+    </td><td> 14 </td><td align="center"> May </td><td> 2013 </td><td> 
+    </td><td> M. Bishop, Reynolds, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 3329780 </td><td> 
+    </td><td align="right"> 193 </td><td> </td><td align="right"> 3329782 </td><td> 
+    </td><td> 25 </td><td align="center"> Jul </td><td> 2014 </td><td> 
+    </td><td> R. Ottusch, Reynolds, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 4192909 </td><td> 
+    </td><td align="right"> 141 </td><td> </td><td align="right"> 4192911 </td><td> 
+    </td><td> 17 </td><td align="center"> Jul </td><td> 2023 </td><td> 
+    </td><td> S. Brown, Reynolds, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 5523858 </td><td> 
+    </td><td align="right"> 13 </td><td> </td><td align="right"> 5523860 </td><td> 
+    </td><td> 22 </td><td align="center"> Jan </td><td> 2020 </td><td> 
+    </td><td> S. Brown, Reynolds, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 7963245 </td><td> 
+    </td><td align="right"> 27 </td><td> </td><td align="right"> 7963247 </td><td> 
+    </td><td> 16 </td><td align="center"> Jan </td><td> 2021 </td><td> 
+    </td><td> T. Greer, Reynolds, Penné &amp; Fougeron 
+</td></tr><tr><td align="right"> 18233954 </td><td> 
+    </td><td align="right"> 7 </td><td> </td><td align="right"> 18233956 </td><td> 
+    </td><td> 05 </td><td align="center"> Oct </td><td> 2020 </td><td> 
+    </td><td> R. Propper, Reynolds, Penné &amp; Fougeron 
+</td></tr></tbody></table>
+</p><p>
+</p><h3 align="center">
+    <a name="Names"> Full names of researchers </a>
+</h3>
+<p> 
+     Pierre de Fermat (1601-1665), Leonhard Euler 
+     (Леонард
+     Эйлер, 1707-1783),
+     Thomas Clausen (1801-1885), James Cullen (1867-1933),
+     Allan Joseph Champneys Cunningham (1842-1928), 
+     Maurice Borisovich Kraitchik (Морис
+     Борисович
+     Крайчик, 1882-1957),
+     Fortuné Landry (1799-1895), Henri Le Lasseur de Ranzey (1821-1894), 
+     François Édouard Anatole Lucas (1842-1891), 
+     James Caddall Morehead (1877-1950), 
+     Ivan Mikheevich Pervushin (Иван 
+     Михеевич
+     Первушин, 1827-1900),
+     Paul Peter Heinrich Seelhoff (1829-1896), Alfred Edward Western (1873-1961). 
+<br><br>
+     A. Oliver L. Atkin (1925-2008), Göran Axelsson, Robert Baillie,
+     J. Ray Ballinger (1953-2014), Serge Batalov 
+     (Сергей
+     Баталов), David Bessell, 
+     Marshall Bishop, Marko Bodschwinna, James Boerner, Robert Boniecki, 
+     Richard P. Brent, John Brillhart (1930-2022), J. Scott Brown, Duncan A. Buell, 
+     Gordon V. Cormack, Curtis Cooper, John B. Cosgrave, 
+     Richard E. Crandall (1947-2012), Michael Dangler, Vasily A. Danilov 
+     (Василий А.
+     Данилов), Patrick Demichel,
+     Rob Derrera, Dirk D'huyvetters, Karl Dilcher, Bruce Dodson, J. Doenias, 
+     Erwin Doescher, Peter Doggart, Dmitry Domanov 
+     (Дмитрий 
+     Доманов), Mark Doom, 
+     Harvey Dubner (1928-2019), Leonid N. Durman 
+     (Леонид Н.
+     Дурман), Michael R. Eaton, Eric Embling,
+     Tony Forbes, Jim Fougeron, Yves Gallot, Gary B. Gostin, Grzegorz Granowski, 
+     Tom Greer, Peter Grobstich, Gennady N. Gusev 
+     (Геннадий
+     Н. Гусев), John C. Hallyburton Jr.,
+     Andreas Höglund, Alexander Hurwitz, Paul Jobling, Mykola Kamenyuk
+     (Микола 
+     Каменюк), Reto Keiser, 
+     Wilfrid Keller, Charles F. Kerchner III, Craig Kitchen, Dmitry Komin
+     (Дмитрий
+     Комин), Alexey V. Komkov
+     (Алексей В.  
+     Комков), Alexander Kruppa, 
+     Sergey Kuzmin (Сергей 
+     Кузьмин), Arjen K. Lenstra, 
+     Rachel Lewis, Sergei Maiorov (Сергей
+     Майоров), 
+     Mark S. Manasse, G. Matthew, Ernst W. Mayer (1963-2023), Roman Maznichenko
+     (Роман
+     Мазниченко),
+     Richard J. McIntosh, Philip P. McLaughlin Jr., Nestor S. de Araújo Melo,
+     François Morain, Luigi Morelli, Dan Morenus, Michael A. Morrison, 
+     Souichi Murata, Takahiro Nohara, Adolf Nordin, C. Norrie, Kevin Odermatt, 
+     Anton P. Oleynick (Антон П. 
+     Олейник), Raymond Ottusch, 
+     Maximilian Pacher, Jason S. Papadopoulos, Jay Parangalan, Jean Penné, 
+     John M. Pollard, Robert Prethaler, Ryan Propper, Martin Ptáček, 
+     Tapio Rajala, John Renze, Geoffrey Reynolds, Neil W. Rickert, 
+     Hans Riesel (1929-2014), Raphael M. Robinson (1911-1995), Mark Rodenkirch, 
+     Payam Samidoost, Pavlos Saridis, John L. Selfridge (1927-2010), Andriy Sen, 
+     David E. Shippee (1946-2003), Peter Strasser, Hiromi Suyama, Jun Tajima, 
+     Sai Yik Tang, Tadashi Taura, Claude Tardif, Eric Ueda, C. van Halewyn, 
+     Bart van Rooijen, Michael Vang, Cedric Vonck, Asko Vuori, Hugh C. Williams, 
+     George F. Woltman, Claude P. Wrathall, Shoichiro Yamada, Senji Yamashita, 
+     Jeffrey Young, Paul Zimmermann. 
+</p><p align="center">
+     Names given without initials in the discoverer column refer to an
+     indirect involvement of programmers whose software was essential for
+     the discovery of the particular prime factor: Durman (Fermat),
+     Fougeron (FermFact, PFGW), Gallot (Proth), Jobling (NewPGen),
+     Kruppa (specialized GMP-ECM), Penné (LLR), Reynolds (Srsieve), 
+     Rodenkirch (GMP-Fermat), Woltman (PRP, Prime95, mmff),
+     Zimmermann (GMP-ECM).
+<br> A semicolon indicates independent discovery by two individuals or teams. 
+</p><h3 align="center">
+    <a name="Summary"> Summary of factoring status for Fermat
+    numbers &nbsp;<i>F<sub>m</sub><sup>&nbsp;</sup></i> <br>
+    as of Jul 06, 2024 </a>
+</h3>
+<p align="center">
+<table>
+<tbody><tr><td> Prime </td><td> &nbsp; 
+    </td><td> <i>m</i> = 0, 1, 2, 3, 4 
+</td></tr><tr><td> Completely factored </td><td> 
+    </td><td> <i>m</i> = 5, 6, 7, 8 (two factors each), 9 (3 factors), 10 (4 factors),
+</td></tr><tr><td> </td><td> </td><td> &nbsp; &nbsp; &nbsp; 
+                   &nbsp;11 (5 factors) 
+</td></tr><tr><td> Six prime factors known </td><td> 
+    </td><td> <i>m</i> = 12<sup>*</sup> 
+</td></tr><tr><td> Four prime factors known </td><td> 
+    </td><td> <i>m</i> = 13<sup>*</sup> 
+</td></tr><tr><td> Three prime factors known </td><td> 
+    </td><td> <i>m</i> = 15<sup>*</sup>, 19<sup>*</sup>, 25<sup>*</sup>, 52, 287 
+</td></tr><tr><td> Two prime factors known </td><td> 
+    </td><td> <i>m</i> = 16<sup>*</sup>, 17<sup>*</sup>, 18<sup>*</sup>, 27<sup>*</sup>,
+         30<sup>*</sup>, 36, 38, 39, 42, 47, 77, 147, 
+</td></tr><tr><td> </td><td> </td><td> &nbsp; &nbsp; &nbsp; 
+         &nbsp;150, 251, 284, 416, 417, 620
+</td></tr><tr><td> Only one prime factor known </td><td> 
+    </td><td> <i>m</i> = 14<sup>*</sup>, 
+         20<sup>*</sup>, 
+         21<sup>*</sup>, 22<sup>*</sup>, 23<sup>*</sup>,
+         26<sup>*</sup>, 28<sup>*</sup>, 29<sup>*</sup>, 31, 32, 37,  
+</td></tr><tr><td> </td><td> </td><td> &nbsp; &nbsp; &nbsp; 
+         &nbsp;and 287 values of  &nbsp;<i>m</i>&nbsp;
+         with &nbsp;39 &lt; <i>m</i> ≤ 18233954 
+</td></tr><tr><td> Composite but no factor known </td><td> &nbsp; 
+    </td><td> <i>m</i> = 24 
+</td></tr><tr><td> Character unknown </td><td> &nbsp; 
+    </td><td> <i>m</i> = 33, 34, 35, 44, 45, 46, 49, 50, 51, 53, 54, 56, 57, 59, 60, . . . 
+</td></tr><tr><td> <sup>*</sup> Cofactor composite 
+</td></tr></tbody></table>
+</p><p align="center"> 379 prime factors known <br>
+                 331 Fermat numbers known to be composite
+</p><h3 align="center">
+    <a name="Count"> Count of factors according to difference
+    &nbsp;<i>n</i> − <i>m</i> </a>
+</h3>
+<p align="center">
+<table> 
+<tbody><tr> <td align="right"> <i>n</i> − <i>m</i> </td><td> &nbsp; = 
+     </td><td align="right"> 2, </td><td align="right"> 3, </td><td align="right"> 4,
+     </td><td align="right"> 5, </td><td align="right"> 6, </td><td align="right"> 7,
+     </td><td align="right"> 8, </td><td align="right"> 9, </td><td> &nbsp; 10, 
+     </td><td> &nbsp; 11, </td><td> &nbsp; 12 
+</td></tr><tr> <td align="right"> Frequency </td><td> </td><td align="right"> 187,
+     </td><td align="right"> &nbsp; 89, </td><td align="right"> &nbsp; 50,
+     </td><td align="right"> &nbsp; 14, </td><td align="right"> &nbsp; 10,
+     </td><td align="right"> &nbsp; 5,  </td><td align="right"> &nbsp; 6,
+     </td><td align="right"> &nbsp; 3,  </td><td align="right"> &nbsp; 3, 
+     </td><td align="right"> &nbsp; 1,  </td><td align="right"> &nbsp; 1 
+</td></tr></tbody></table>
+</p><h3 align="center">
+    <a name="References"> Selected references </a>
+</h3>
+<b>Factoring status at earlier stages</b>
+<ul>
+<li><b>1958</b> &nbsp; Raphael M. Robinson, A report on primes of the form
+            <i>k</i> · 2<sup><i>n</i></sup> + 1 and on factors of
+            Fermat numbers, 
+            <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+            <i>Proc. Amer. Math. Soc.</i> <b>9</b> (1958), 673-681. 
+&nbsp;<a href="http://www.ams.org/journals/proc/1958-009-05/S0002-9939-1958-0096614-7/S0002-9939-1958-0096614-7.pdf">PDF</a>&nbsp; 
+            [38 prime factors known: complete list]
+</li><li><b>1964</b> &nbsp; Claude P. Wrathall, New factors of Fermat numbers, <i>Math. Comp.</i>
+            <b>18</b> (1964), 324-325. 
+&nbsp;<a href="http://www.ams.org/journals/mcom/1964-18-086/S0025-5718-1964-0163868-9/S0025-5718-1964-0163868-9.pdf">PDF</a> 
+            <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+            [51 prime factors known]
+</li><li><b>1975</b> &nbsp; John C. Hallyburton, Jr. &amp; John Brillhart, Two new factors
+            of Fermat numbers, 
+            <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+            <i>Math. Comp.</i> <b>29</b> (1975), 109-112. 
+&nbsp;<a href="http://www.ams.org/journals/mcom/1975-29-129/S0025-5718-1975-0369225-1/S0025-5718-1975-0369225-1.pdf">PDF</a>&nbsp; 
+            [55 prime factors known]
+</li><li><b>1983</b> &nbsp; Wilfrid Keller, Factors of Fermat numbers and large primes 
+            of the form <i>k</i> · 2<sup><i>n</i></sup> + 1, 
+            <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+            <i>Math. Comp.</i> <b>41</b> (1983), 661-673. 
+&nbsp;<a href="http://www.ams.org/journals/mcom/1983-41-164/S0025-5718-1983-0717710-7/S0025-5718-1983-0717710-7.pdf">PDF</a>&nbsp; 
+            [90 prime factors known]
+</li><li><b>1995</b> &nbsp; Gary B. Gostin, New factors of Fermat numbers,
+            <i>Math. Comp.</i> <b>64</b> (1995), 393-395. 
+&nbsp;<a href="http://www.ams.org/journals/mcom/1995-64-209/S0025-5718-1995-1265015-9/S0025-5718-1995-1265015-9.pdf">PDF</a>&nbsp; 
+            <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+            [46 new prime factors; 161 prime factors known overall]
+</li></ul>
+<b>Completed factorizations</b>
+<ul>
+<li><b>1975</b> &nbsp; Michael A. Morrison &amp; John Brillhart, A method
+            of factoring and the factorization of <i>F</i><sub>7</sub>,
+            <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+            <i>Math. Comp.</i> <b>29</b> (1975), 183-205. 
+&nbsp;<a href="http://www.ams.org/journals/mcom/1975-29-129/S0025-5718-1975-0371800-5/S0025-5718-1975-0371800-5.pdf">PDF</a>&nbsp; 
+            [Continued fraction method]     
+</li><li><b>1981</b> &nbsp; Richard P. Brent &amp; John M. Pollard, Factorization
+            of the eighth Fermat number, 
+            <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+            <i>Math. Comp.</i> <b>36</b> (1981), 627-630. 
+&nbsp;<a href="http://www.ams.org/journals/mcom/1981-36-154/S0025-5718-1981-0606520-5/S0025-5718-1981-0606520-5.pdf">PDF</a>&nbsp;
+            [Pollard rho algorithm]
+</li><li><b>1993</b> &nbsp; A. K. Lenstra, H. W. Lenstra, Jr., M. S. Manasse &amp;
+            J. M. Pollard, The factorization of the ninth Fermat number,
+            <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+            <i>Math. Comp.</i> <b>61</b> (1993), 319-349. 
+&nbsp;<a href="http://www.ams.org/journals/mcom/1993-61-203/S0025-5718-1993-1182953-4/S0025-5718-1993-1182953-4.pdf">PDF</a>&nbsp; 
+            [Number field sieve]
+</li><li><b>1999</b> &nbsp; Richard P. Brent, Factorization of the tenth Fermat number,
+            <i>Math. Comp.</i> <b>68</b> (1999), 429-451. 
+&nbsp;<a href="http://www.ams.org/journals/mcom/1999-68-225/S0025-5718-99-00992-8/S0025-5718-99-00992-8.pdf">PDF</a> 
+            <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+            [Elliptic curve method]
+</li></ul>
+<b>Proofs of compositeness</b>
+<ul>
+<li><b>1988</b> &nbsp; Jeff Young &amp; Duncan A. Buell, The twentieth Fermat
+            number is composite, 
+            <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+            <i>Math. Comp.</i> <b>50</b> (1988), 261-263. 
+&nbsp;<a href="http://www.ams.org/journals/mcom/1988-50-181/S0025-5718-1988-0917833-8/S0025-5718-1988-0917833-8.pdf">PDF</a> 
+</li><li><b>2003</b> &nbsp; Richard E. Crandall, Ernst W. Mayer &amp; Jason S. Papadopoulos,
+            The twenty-fourth Fermat number is composite,
+            <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+            <i>Math. Comp.</i> <b>72</b> (2003), 1555-1572. 
+&nbsp;<a href="http://www.ams.org/journals/mcom/2003-72-243/S0025-5718-02-01479-5/S0025-5718-02-01479-5.pdf">PDF</a> 
+</li></ul>
+<h3 align="center">
+    <a name="Search"> Search limits for
+    &nbsp;<i>k</i> · 2<sup><i>n</i></sup> + 1&nbsp; as possible
+    factors of some &nbsp;<i>F<sub>m</sub></i>,
+    &nbsp;<i>m</i> <u>&lt;</u> <i>n</i> − 2 <br>
+    All odd &nbsp;<i>k</i> &lt; <i>L<sub>n</sub></i>&nbsp;
+    tested </a> 
+</h3>
+<p align="center">
+    <b> For more detailed information,
+    <br> see
+    <a href="http://www.fermatsearch.org/stat/done.php">
+    http://www.fermatsearch.org/stat/done.php</a>
+    </b>
+</p><p align="center">
+<table>
+<tbody><tr><td align="right"> </td><td> <b><i>n</i></b> </td><td> 
+    </td><td align="right"> </td><td> <b><i>L<sub>n</sub></i></b> </td><td>
+</td></tr><tr><td align="right"> 14&nbsp;</td><td>-</td><td>19
+    </td><td align="right"> 1100000000000000&nbsp; </td><td>=</td><td>1.1 · 10<sup>15</sup> 
+</td></tr><tr><td align="right"> 20&nbsp;</td><td> </td><td>
+    </td><td align="right"> 4000000000000000&nbsp; </td><td>=</td><td>4 · 10<sup>15</sup> 
+</td></tr><tr><td align="right"> 21&nbsp;</td><td>-</td><td>23
+    </td><td align="right"> 2250000000000000&nbsp; </td><td>=</td><td>2.25 · 10<sup>15</sup> 
+</td></tr><tr><td align="right"> 24&nbsp;</td><td>-</td><td>25
+    </td><td align="right"> 4800000000000000&nbsp; </td><td>=</td><td>4.8 · 10<sup>15</sup> 
+</td></tr><tr><td align="right"> 26&nbsp;</td><td> </td><td>
+    </td><td align="right"> 3000000000000000&nbsp; </td><td>=</td><td>3 · 10<sup>15</sup> 
+</td></tr><tr><td align="right"> 27&nbsp;</td><td> </td><td>
+    </td><td align="right"> 2600000000000000&nbsp; </td><td>=</td><td>2.6 · 10<sup>15</sup> 
+</td></tr><tr><td align="right"> 28&nbsp;</td><td> </td><td>
+    </td><td align="right"> 2000000000000000000&nbsp; </td><td>=</td><td>2 · 10<sup>18</sup> 
+</td></tr><tr><td align="right"> 29&nbsp;</td><td> </td><td>
+    </td><td align="right"> 1100000000000000000&nbsp; </td><td>=</td><td>1.1 · 10<sup>18</sup> 
+</td></tr><tr><td align="right"> 30&nbsp;</td><td>-</td><td>34
+    </td><td align="right"> 100000000000000000&nbsp; </td><td>=</td><td>10<sup>17</sup> 
+</td></tr><tr><td align="right"> 35&nbsp;</td><td> </td><td>
+    </td><td align="right"> 480000000000000000&nbsp; </td><td>=</td><td>4.8 · 10<sup>17</sup> 
+</td></tr><tr><td align="right"> 36&nbsp;</td><td> </td><td>
+    </td><td align="right"> 700000000000000000&nbsp; </td><td>=</td><td>7 · 10<sup>17</sup> 
+</td></tr><tr><td align="right"> 37&nbsp;</td><td> </td><td>
+    </td><td align="right"> 260000000000000000&nbsp; </td><td>=</td><td>2.6 · 10<sup>17</sup> 
+</td></tr><tr><td align="right"> 38&nbsp;</td><td> </td><td>
+    </td><td align="right"> 160000000000000000&nbsp; </td><td>=</td><td>1.6 · 10<sup>17</sup> 
+</td></tr><tr><td align="right"> 39&nbsp;</td><td> </td><td>
+    </td><td align="right"> 100000000000000000&nbsp; </td><td>=</td><td>10<sup>17</sup> 
+</td></tr><tr><td align="right"> 40&nbsp;</td><td>-</td><td>46
+    </td><td align="right"> 30000000000000000&nbsp;</td><td>=</td><td>3 · 10<sup>16</sup> 
+</td></tr><tr><td align="right"> 47&nbsp;</td><td>-</td><td>49
+    </td><td align="right"> 20000000000000000&nbsp;</td><td>=</td><td>2 · 10<sup>16</sup> 
+</td></tr><tr><td align="right"> 50&nbsp;</td><td>-</td><td>59
+    </td><td align="right"> 15000000000000000&nbsp;</td><td>=</td><td>1.5 · 10<sup>16</sup> 
+</td></tr><tr><td align="right"> 60&nbsp;</td><td>-</td><td>63
+    </td><td align="right"> 5000000000000000&nbsp;</td><td>=</td><td>5 · 10<sup>15</sup> 
+
+</td></tr><tr><td align="right"> 64&nbsp;</td><td>-</td><td>99
+    </td><td align="right"> 1000000000000000&nbsp;</td><td>=</td><td>10<sup>15</sup> 
+</td></tr><tr><td align="right"> 100&nbsp;</td><td>-</td><td>109
+    </td><td align="right"> 200000000000000&nbsp;</td><td>=</td><td>2 · 10<sup>14</sup> 
+</td></tr><tr><td align="right"> 110&nbsp;</td><td>-</td><td>149
+    </td><td align="right"> 100000000000000&nbsp;</td><td>=</td><td>10<sup>14</sup> 
+</td></tr><tr><td align="right"> 150&nbsp;</td><td>-</td><td>159
+    </td><td align="right"> 150000000000000&nbsp;</td><td>=</td><td>1.5 · 10<sup>14</sup> 
+</td></tr><tr><td align="right"> 160&nbsp;</td><td>-</td><td>169
+    </td><td align="right"> 200000000000000&nbsp;</td><td>=</td><td>2 · 10<sup>14</sup> 
+</td></tr><tr><td align="right"> 170&nbsp;</td><td>-</td><td>199 &nbsp; &nbsp; &nbsp; 
+    </td><td align="right"> 2000000000000&nbsp;</td><td>=</td><td>2 · 10<sup>12</sup> 
+</td></tr><tr><td align="right">  200&nbsp;</td><td>-</td><td>249 &nbsp; &nbsp; &nbsp; 
+    </td><td align="right"> 8000000000000&nbsp;</td><td>=</td><td>8 · 10<sup>12</sup> 
+</td></tr><tr><td align="right">  250&nbsp;</td><td>-</td><td>345 &nbsp; &nbsp; &nbsp; 
+    </td><td align="right"> 150000000000&nbsp;</td><td>=</td><td>1.5 · 10<sup>11</sup> 
+</td></tr><tr><td align="right">  346&nbsp;</td><td>-</td><td>499 &nbsp; &nbsp; &nbsp; 
+    </td><td align="right"> 100000000000&nbsp;</td><td>=</td><td>10<sup>11</sup> 
+</td></tr><tr><td align="right">  500&nbsp;</td><td>-</td><td>599 &nbsp; &nbsp; &nbsp; 
+    </td><td align="right"> 40000000000&nbsp;</td><td>=</td><td>4 · 10<sup>10</sup> 
+
+</td></tr><tr><td align="right">  601&nbsp;</td><td>-</td><td>620 
+    </td><td align="right"> <font color="blue"> 650000000000&nbsp;</font></td><td><font color="blue">=</font></td><td><font color="blue">6.5 · 10<sup>11</sup> 
+</font></td></tr><tr><td align="right">  621&nbsp;</td><td>-</td><td>640 
+    </td><td align="right"> <font color="blue"> 600000000000&nbsp;</font></td><td><font color="blue">=</font></td><td><font color="blue">6 · 10<sup>11</sup> 
+</font></td></tr><tr><td align="right">  641&nbsp;</td><td>-</td><td>900 
+    </td><td align="right"> <font color="blue"> 300000000000&nbsp;</font></td><td><font color="blue">=</font></td><td><font color="blue">3 · 10<sup>11</sup> 
+</font></td></tr><tr><td align="right">  901&nbsp;</td><td>-</td><td>1000 
+    </td><td align="right"> <font color="blue"> 150000000000&nbsp;</font></td><td><font color="blue">=</font></td><td><font color="blue">1.5 · 10<sup>11</sup> 
+</font></td></tr><tr><td align="right">  1001&nbsp;</td><td>-</td><td>1200 
+    </td><td align="right"> <font color="blue"> 100000000000&nbsp;</font></td><td><font color="blue">=</font></td><td><font color="blue">10<sup>11</sup> 
+</font></td></tr><tr><td align="right">  1201&nbsp;</td><td>-</td><td>1600 
+    </td><td align="right"> <font color="blue"> 60000000000&nbsp;</font></td><td><font color="blue">=</font></td><td><font color="blue">6 · 10<sup>10</sup> 
+</font></td></tr><tr><td align="right">  1601&nbsp;</td><td>-</td><td>2000 
+    </td><td align="right"> <font color="blue"> 30000000000&nbsp;</font></td><td><font color="blue">=</font></td><td><font color="blue">3 · 10<sup>10</sup> 
+
+</font></td></tr><tr><td align="right"> 2001&nbsp;</td><td>-</td><td>4000 
+    </td><td align="right">  400000000&nbsp;</td><td>=</td><td>4 · 10<sup>8</sup> 
+</td></tr><tr><td align="right"> 4001&nbsp;</td><td>-</td><td>5000 
+    </td><td align="right">  200000000&nbsp;</td><td>=</td><td>2 · 10<sup>8</sup>
+</td></tr><tr><td align="right"> 5001&nbsp;</td><td>-</td><td>6000 
+    </td><td align="right">  100000000&nbsp;</td><td>=</td><td>10<sup>8</sup>
+</td></tr><tr><td align="right"> 6001&nbsp;</td><td>-</td><td>7200 
+    </td><td align="right">   50000000&nbsp;</td><td>=</td><td>5 · 10<sup>7</sup>
+</td></tr><tr><td align="right"> 7201&nbsp;</td><td>-</td><td>8000 
+    </td><td align="right">   20000000&nbsp;</td><td>=</td><td>2 · 10<sup>7</sup> 
+</td></tr><tr><td align="right"> 8001&nbsp;</td><td>-</td><td>12000 
+    </td><td align="right">   10000000&nbsp;</td><td>=</td><td>10<sup>7</sup> 
+
+</td></tr><tr><td align="right"> 12001&nbsp;</td><td>-</td><td>14500 
+    </td><td align="right"> <font color="blue"> 70000000&nbsp;</font></td><td><font color="blue">=</font></td><td><font color="blue">7 · 10<sup>7</sup> 
+</font></td></tr><tr><td align="right"> 14501&nbsp;</td><td>-</td><td>16000 
+    </td><td align="right"> <font color="blue"> 40000000&nbsp;</font></td><td><font color="blue">=</font></td><td><font color="blue">4 · 10<sup>7</sup> 
+
+</font></td></tr><tr><td align="right"> 16001&nbsp;</td><td>-</td><td>19000 
+    </td><td align="right"> <font color="blue"> 20000000&nbsp;</font></td><td><font color="blue">=</font></td><td><font color="blue">2 · 10<sup>7</sup> 
+</font></td></tr><tr><td align="right"> 19001&nbsp;</td><td>-</td><td>22000 
+    </td><td align="right"> <font color="blue"> 12000000&nbsp;</font></td><td><font color="blue">=</font></td><td><font color="blue">1.2 · 10<sup>7</sup> 
+
+</font></td></tr><tr><td align="right"> 22001&nbsp;</td><td>-</td><td>25000 
+    </td><td align="right"> <font color="blue"> 8000000&nbsp;</font></td><td><font color="blue">=</font></td><td><font color="blue">8 · 10<sup>6</sup> 
+</font></td></tr><tr><td align="right"> 25001&nbsp;</td><td>-</td><td>30000 
+    </td><td align="right"> <font color="blue"> 6000000&nbsp;</font></td><td><font color="blue">=</font></td><td><font color="blue">6 · 10<sup>6</sup> 
+</font></td></tr><tr><td align="right"> 30001&nbsp;</td><td>-</td><td>35000 
+    </td><td align="right"> <font color="blue"> 3000000&nbsp;</font></td><td><font color="blue">=</font></td><td><font color="blue">3 · 10<sup>6</sup> 
+</font></td></tr><tr><td align="right"> 35001&nbsp;</td><td>-</td><td>40000 
+    </td><td align="right"> <font color="blue"> 2000000&nbsp;</font></td><td><font color="blue">=</font></td><td><font color="blue">2 · 10<sup>6</sup> 
+</font></td></tr><tr><td align="right"> 40001&nbsp;</td><td>-</td><td>45000 
+    </td><td align="right"> <font color="blue"> 600000&nbsp;</font></td><td><font color="blue">=</font></td><td><font color="blue">6 · 10<sup>5</sup> 
+</font></td></tr><tr><td align="right"> 45001&nbsp;</td><td>-</td><td>50000 
+    </td><td align="right"> <font color="blue"> 400000&nbsp;</font></td><td><font color="blue">=</font></td><td><font color="blue">4 · 10<sup>5</sup> 
+
+</font></td></tr><tr><td align="right"> 50001&nbsp;</td><td>-</td><td>55000 
+    </td><td align="right">   2400000&nbsp;</td><td>=</td><td>2.4 · 10<sup>6</sup> 
+</td></tr><tr><td align="right"> 55001&nbsp;</td><td>-</td><td>60000 
+    </td><td align="right">   1600000&nbsp;</td><td>=</td><td>1.6 · 10<sup>6</sup> 
+</td></tr><tr><td align="right"> 60001&nbsp;</td><td>-</td><td>62000 
+    </td><td align="right">   1200000&nbsp;</td><td>=</td><td>1.2 · 10<sup>6</sup> 
+</td></tr><tr><td align="right"> 62001&nbsp;</td><td>-</td><td>70000 
+    </td><td align="right">   1000000&nbsp;</td><td>=</td><td>10<sup>6</sup> 
+</td></tr><tr><td align="right"> 70001&nbsp;</td><td>-</td><td>75000 
+    </td><td align="right">      600000&nbsp;</td><td>=</td><td>6 · 10<sup>5</sup>
+</td></tr><tr><td align="right"> 75001&nbsp;</td><td>-</td><td>80000 
+    </td><td align="right">      500000&nbsp;</td><td>=</td><td>5 · 10<sup>5</sup> 
+</td></tr><tr><td align="right"> 80001&nbsp;</td><td>-</td><td>85000 
+    </td><td align="right">      400000&nbsp;</td><td>=</td><td>4 · 10<sup>5</sup> 
+</td></tr><tr><td align="right"> 85001&nbsp;</td><td>-</td><td>88000 
+    </td><td align="right">      350000&nbsp;</td><td>=</td><td>3.5 · 10<sup>5</sup> 
+</td></tr><tr><td align="right"> 88001&nbsp;</td><td>-</td><td>90000 
+    </td><td align="right">      300000&nbsp;</td><td>=</td><td>3 · 10<sup>5</sup> 
+</td></tr><tr><td align="right"> 90001&nbsp;</td><td>-</td><td>100000 
+    </td><td align="right">      250000&nbsp;</td><td>=</td><td>2.5 · 10<sup>5</sup> 
+</td></tr><tr><td align="right"> 100001&nbsp;</td><td>-</td><td>120000 
+    </td><td align="right">      130000&nbsp;</td><td>=</td><td>1.3 · 10<sup>5</sup> 
+</td></tr><tr><td align="right"> 120001&nbsp;</td><td>-</td><td>130000 
+    </td><td align="right">       60000&nbsp;</td><td> </td><td> 
+</td></tr><tr><td align="right"> 130001&nbsp;</td><td>-</td><td>150000 
+    </td><td align="right">       50000&nbsp;</td><td> </td><td> 
+</td></tr><tr><td align="right"> 150001&nbsp;</td><td>-</td><td>190000 
+    </td><td align="right">       30000&nbsp;</td><td> </td><td> 
+</td></tr><tr><td align="right"> 190001&nbsp;</td><td>-</td><td>1000000 
+    </td><td align="right">       20000&nbsp;</td><td> </td><td> 
+</td></tr><tr><td align="right"> 1000001&nbsp;</td><td>-</td><td>1760000 
+    </td><td align="right">       10000&nbsp;</td><td> </td><td> 
+</td></tr><tr><td align="right"> 1760001&nbsp;</td><td>-</td><td>3600000 
+    </td><td align="right">        1200&nbsp;</td><td> </td><td> 
+</td></tr><tr><td align="right"> 3600001&nbsp;</td><td>-</td><td>4000000 
+    </td><td align="right">         740&nbsp;</td><td> </td><td> 
+</td></tr></tbody></table>
+</p><p>
+</p><hr>
+<i> URL: http://www.prothsearch.com/fermat.html
+<br> Last modified: Jul 06, 2024</i>.
+<p>
+
+
+</p></body></html>
